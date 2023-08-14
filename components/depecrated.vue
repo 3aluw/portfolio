@@ -1,12 +1,13 @@
 <template>
-    <div class="s-two-main flex flex-col gap-8 align-center py-4 pb-12">
+    <div class="s-two-main flex flex-col gap-8 align-center">
+
         <div class="project-cont " v-for="project in projects">
             <div class="img-cont"><img :src="`${project.image}`" alt=""></div>
             <p class="project-title my-2">{{ project.name }}</p>
             <p class="project-desc mt-1">{{ project.description }}</p>
-            <div class="btns-cont my-4 flex justify-center align-center flex-wrap gap-3 mx-2">
-                <v-btn prepend-icon="mdi:mdi-github" class="project-btn !m-0">View on github</v-btn>
-                <v-btn append-icon="mdi:mdi-arrow-right" class="project-btn !m-0"> more infos </v-btn>
+            <div class="btns-cont my-4">
+                <v-btn prepend-icon="mdi:mdi-github" class="project-btn m-1">View on github</v-btn>
+                <v-btn append-icon="mdi:mdi-arrow-right" class="project-btn m-1"> more infos </v-btn>
             </div>
         </div>
     </div>
@@ -24,12 +25,9 @@ console.log(projects)
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 .project-cont {
-    width: 80%;
-    min-width: 18rem;
-    box-shadow: 10px 15px 0px 0px #000;
+    width: 90%;
     border-radius: 1.25rem;
-    border: 3px solid #A2C1D1;
-    background: #FFF;
+    outline: 1px solid #DBE7ED;
     background: #FFF;
     text-align: center;
 }
@@ -51,12 +49,12 @@ console.log(projects)
 }
 
 .project-title {
-    color: #1867C0;
+    color: #39829B;
     text-align: center;
-    font-family: 'Open Sans';
+    font-family: Open Sans;
     font-size: 1.3125rem;
     font-weight: 700;
-
+    border-bottom: 1px solid black;
     display: inline-block;
 }
 
@@ -82,7 +80,5 @@ console.log(projects)
     font-style: normal;
     font-weight: 600;
     text-transform: unset !important;
-    min-width: 9.5rem;
-    justify-content: space-between;
 }
 </style>
