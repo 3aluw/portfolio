@@ -1,60 +1,104 @@
 <template>
     <div class="s-one-main">
-        <div class="my-mesaage-cont py-4">
-            <div class="personal-infos flex justify-between ">
-                <v-avatar>
-                    <v-img src="/face.png" alt="John"></v-img>
-                </v-avatar>
-                <p class="name">Abdellah</p>
-            </div>
-            <p class="message-body ml-12">
-                Hi, <span> I'm Abdellah.</span> An aspiring web developer eager to seize the opportunity to learn, grow,
-                and
-                collaborate closely with other talented developers and enthusiastic managers
-            </p>
-        </div>
-        <Transition>
-            <div class="visitor-mesaage-cont py-4" v-show="showVisitorMessage">
-                <div class="personal-infos flex justify-between float-right">
-                    <p class="name">Abdellah</p>
+        <div class="messages-cont">
+
+            <div class="my-mesaage-cont py-4">
+                <div class="personal-infos flex justify-between ">
                     <v-avatar>
                         <v-img src="/face.png" alt="John"></v-img>
                     </v-avatar>
+                    <p class="name">Abdellah</p>
                 </div>
-                <p class="message-body  mr-12 float-left">
+                <p class="message-body ml-12">
                     Hi, <span> I'm Abdellah.</span> An aspiring web developer eager to seize the opportunity to learn, grow,
                     and
                     collaborate closely with other talented developers and enthusiastic managers
                 </p>
-                <div class="clear-both"></div>
             </div>
-        </Transition>
+            <Transition>
+                <div class="visitor-mesaage-cont py-4" v-show="showVisitorMessage">
+                    <div class="personal-infos flex justify-between float-right">
+                        <p class="name">Abdellah</p>
+                        <v-avatar>
+                            <v-img src="/face.png" alt="John"></v-img>
+                        </v-avatar>
+                    </div>
+                    <p class="message-body  mr-12 float-left">
+                        Hi, <span> I'm Abdellah.</span> An aspiring web developer eager to seize the opportunity to learn,
+                        grow,
+                        and
+                        collaborate closely with other talented developers and enthusiastic managers
+                    </p>
+                    <div class="clear-both"></div>
+                </div>
+            </Transition>
+        </div>
         <div class="type-message-cont" v-if="!showVisitorMessage">
-            <v-textarea auto-grow rows="1" max-rows="3" theme="dark" bg-color="#41374E" variant="solo"
-                label="type your message" base-color="white" hide-details></v-textarea>
-            <v-btn icon="mdi-send" color="white" variant="plain" :loading="sendingMessage" @click="sendMessage">
-                <template v-slot:loader>
-                    <v-progress-circular indeterminate></v-progress-circular>
-                </template>
-            </v-btn>
+            <div class="flex items-center pr-2">
+                <v-textarea class="elevation-0 h-full" auto-grow rows="1" max-rows="3" theme="dark" bg-color="#41374E"
+                    variant="solo" label="type your message" placeholder="please insert your email too" base-color="white"
+                    hide-details :rules="textareaRules" validate-on="input lazy"></v-textarea>
+                <v-btn icon="mdi-send" color="white" variant="plain" :loading="sendingMessage" @click="sendMessage">
+                    <template v-slot:loader>
+                        <v-progress-circular indeterminate></v-progress-circular>
+                    </template>
+                </v-btn>
+            </div>
+            <small class="pl-4 text-red ">{{ messageValidation }}</small>
         </div>
     </div>
 </template>
-<script setup>
+<script setup lang="ts">
 const sendingMessage = ref(false)
 const showVisitorMessage = ref(false)
 const sendMessage = () => {
     sendingMessage.value = true;
     showVisitorMessage.value = true;
     setTimeout(() => (sendingMessage.value = false), 2000)
-
 }
+const messageValidation = ref('')
+
+
+
+const textareaRules = [
+    (value: string) => {
+        const reg = /\b[a-z0-9-_.]+@[a-z0-9-_.]+(\.[a-z0-9]+)+/i
+        if (value.length < 20) { messageValidation.value = 'too short messsage'; return false }
+        else if (value.length > 1000) { messageValidation.value = 'your messsage is too long'; return false }
+        else if (!reg.test(value)) { messageValidation.value = 'please insert you email'; return false }
+        else { messageValidation.value = ''; return true }
+    }
+]
 </script>
-<style scoped>
+<style>
 .s-one-main {
     background: #928A9B;
     min-height: 10rem;
 
+}
+
+.messages-cont {
+    min-height: 15rem;
+}
+
+.my-mesaage-cont {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .personal-infos {
@@ -93,18 +137,15 @@ const sendMessage = () => {
     color: #41B883;
 }
 
-
-
-.v-text-field {
-    font-family: inter;
+.type-message-cont {
+    background: #41374E;
 }
 
-.type-message-cont {
-    margin-top: 12.5rem;
-    background: #41374E;
-    display: flex;
-    align-items: center;
-    padding-right: 1rem;
+.type-message-cont small {
+    margin-top: -0.5rem;
+    display: block;
+    position: relative;
+
 }
 
 .visitor-mesaage-cont .message-body {
@@ -123,5 +164,10 @@ const sendMessage = () => {
 .v-leave-to {
     opacity: 0;
     transform: translateX(100%);
+}
+
+.v-field--variant-solo,
+.v-field--variant-solo-filled {
+    box-shadow: none;
 }
 </style>
