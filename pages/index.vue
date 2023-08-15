@@ -13,14 +13,27 @@
         <p class="s-header yellow !text-4xl py-8"> Some projects</p>
         <SectionTwoMain />
     </section>
-    <section class="section-three"></section>
+
+    <section class="section-three">
+        <p class="s-header yellow !text-4xl py-8">About me</p>
+        <SectionThreeMain />
+    </section>
+    <footer>
+        <Footer />
+    </footer>
 </template>
 <script setup lang="ts">
 
 </script>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+
 .yellow {
     color: #F9F871 !important
+}
+
+section {
+    padding-block: 2rem;
 }
 
 /*ssection One */
@@ -39,5 +52,9 @@
 
 .section-two {
     background: #5F5867;
+}
+
+.section-three {
+    background: rgba(113, 106, 121, 0.83);
 }
 </style>

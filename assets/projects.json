@@ -27,6 +27,12 @@
         "name": "seating plan generator",
         "description": "It can help teachers to manage their seating plans",
         "image": "/project-pics/seating-planer.png",
-        "url":"/seating-planer"
+        "url":"/seating-planner"
+    },
+    {
+        "name": "interactive leaderboard",
+        "description": "it organises any kind of game",
+        "image": "/project-pics/interactive-leaderboard.png",
+        "url":"/leaderboard-planer"
     }
 ]

@@ -1,5 +1,5 @@
 <template>
-    <div class="s-two-main flex flex-col gap-8 align-center py-4 pb-12">
+    <div class="s-two-main flex flex-wrap justify-center px-1 gap-8 align-center py-4 pb-12 md:hidden">
         <div class="project-cont " v-for="project in projects">
             <div class="img-cont"><img :src="`${project.image}`" alt=""></div>
             <p class="project-title my-2">{{ project.name }}</p>
@@ -24,8 +24,8 @@ console.log(projects)
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 .project-cont {
-    width: 80%;
-    min-width: 18rem;
+    min-width: 330px;
+    width: 40%;
     box-shadow: 10px 15px 0px 0px #000;
     border-radius: 1.25rem;
     border: 3px solid #A2C1D1;
@@ -56,7 +56,6 @@ console.log(projects)
     font-family: 'Open Sans';
     font-size: 1.3125rem;
     font-weight: 700;
-
     display: inline-block;
 }
 
