@@ -16,7 +16,7 @@
 <style scoped>
 .footer-cont>p {
     background: #061C2D;
-    width: 100%;
+
     color: white;
     text-align: center;
     padding-block: 2rem;
