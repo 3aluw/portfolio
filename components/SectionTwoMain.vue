@@ -27,7 +27,7 @@ import projects from "~/assets/projects.json";
 
 .project-cont {
     width: clamp(330px, 90%, 500px);
-    box-shadow: 10px 15px 0px 0px #000;
+    box-shadow: 7px 10px 0px 0px #00000080;
     background: #FFF;
 }
 
