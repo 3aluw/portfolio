@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       ],
     },
       build: {
-    transpile: ['vuetify'],
+    transpile: ['vuetify', 'gsap'],
   },
   vite: {
     define: {
