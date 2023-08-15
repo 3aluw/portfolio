@@ -25,8 +25,8 @@
 <script setup lang="ts">
 
 </script>
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+<style >
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 .yellow {
     color: #F9F871 !important
