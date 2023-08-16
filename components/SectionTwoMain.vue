@@ -53,6 +53,7 @@ onUnmounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 .s-two-main {
+    --spacing: 0.2rem;
     position: relative;
     min-height: 100vh;
 }
@@ -62,6 +63,36 @@ onUnmounted(() => {
     box-shadow: 7px 7px 16px 0px #00000026;
     background: #FFF;
     position: absolute;
+}
+
+
+.project-cont:nth-child(1) {
+    margin-top: calc(var(--spacing)*1);
+
+}
+
+.project-cont:nth-child(2) {
+    margin-top: calc(var(--spacing)*2);
+
+}
+
+.project-cont:nth-child(3) {
+    margin-top: calc(var(--spacing)*3);
+}
+
+.project-cont:nth-child(4) {
+    margin-top: calc(var(--spacing)*4);
+
+}
+
+.project-cont:nth-child(5) {
+    margin-top: calc(var(--spacing)*5);
+
+}
+
+.project-cont:nth-child(6) {
+    margin-top: calc(var(--spacing)*6);
+
 }
 
 .img-cont {

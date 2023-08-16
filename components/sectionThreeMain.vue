@@ -17,6 +17,7 @@ const writtenSentences: Ref<string[]> = ref([]);
 
 
 const writer = () => {
+    console.log('called')
     sentences.forEach((sentence, index) => {
         let i = 0;
         let writtenSentenceArray: string[] = []
@@ -33,6 +34,7 @@ const writer = () => {
         stringWriter()
 
     })
+    ctx.revert();
     return undefined
 }
 
@@ -49,7 +51,7 @@ onMounted(() => {
                 trigger: ".sentence-cont",
                 markers: true,
                 start: "bottom bottom",
-                onEnter: writer
+                onEnter: writer,
 
             }
         })
