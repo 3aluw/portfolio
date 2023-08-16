@@ -15,7 +15,7 @@
 <script setup lang="ts"></script>
 <style scoped>
 .footer-cont>p {
-    background: #061C2D;
+    background: #898390;
 
     color: white;
     text-align: center;

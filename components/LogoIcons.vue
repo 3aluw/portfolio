@@ -31,7 +31,7 @@ const props = defineProps({
 @keyframes float {
 
     50% {
-        transform: translateY(-100%);
+        transform: translateY(-200%);
     }
 
     100% {

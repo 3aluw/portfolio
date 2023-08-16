@@ -19,15 +19,30 @@
                 <div class="visitor-mesaage-cont py-4" v-show="showVisitorMessage">
                     <div class="personal-infos flex justify-between flex-row-reverse float-right">
                         <v-avatar>
-                            <v-img src="/face.png" alt="John"></v-img>
+                            <v-img src="/alien.svg" alt="John"></v-img>
                         </v-avatar>
-                        <p class="name">Abdellah</p>
+                        <p class="name">You</p>
                     </div>
                     <p class="message-body mr-12 clear-both float-right">
                         {{ visitorMessage }}
                     </p>
+                    <div class="clear-both"></div>
                 </div>
             </Transition>
+            <Transition>
+                <div class="my-message-cont py-4" v-show="showMyReply">
+                    <div class="personal-infos flex justify-between ">
+                        <v-avatar>
+                            <v-img src="/face.png" alt="John"></v-img>
+                        </v-avatar>
+                        <p class="name">Abdellah</p>
+                    </div>
+                    <p class="message-body ml-12">
+                        Thank you , I will message you back soon.
+                    </p>
+                </div>
+            </Transition>
+
         </div>
 
 
@@ -50,7 +65,7 @@
 <script setup lang="ts">
 const sendingMessage = ref(false)
 const showVisitorMessage = ref(false)
-
+const showMyReply = ref(false)
 const visitorMessage = ref('')
 const sendMessage = () => {
     if (textareaRules[0](visitorMessage.value) !== true) return
@@ -65,7 +80,6 @@ const sendMessage = () => {
         .then(response => response.json())
         .then(data => {
             // Handle the response data as needed
-            console.log("data:", data);
             if (data.status === 'success') {
 
             } else if (data.status === 'failed') {
@@ -80,7 +94,7 @@ const sendMessage = () => {
 
     sendingMessage.value = true;
     showVisitorMessage.value = true;
-    setTimeout(() => (sendingMessage.value = false), 2000)
+    setTimeout(() => { sendingMessage.value = false; showMyReply.value = true }, 2000)
 }
 const messageValidation = ref('')
 
