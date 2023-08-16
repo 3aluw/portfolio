@@ -1,5 +1,5 @@
 <template>
-    <div class="s-three-main my-4 pl-12 pr-4 pt-20 pb-8">
+    <div class="s-three-main my-4 pl-12 pr-4 pt-20 pb-8 overflow-hidden">
         <div class="sentence-cont flex mt-4" v-for="(sentence, index) in sentences">
             <div class="num">{{ index + 1 }}.</div>
             <p> {{ writtenSentences[index] }} </p>
@@ -14,23 +14,52 @@ import sentences from "~/assets/aboutMe.json"
 
 const writtenSentences: Ref<string[]> = ref([]);
 
-sentences.forEach((sentence, index) => {
-    let i = 0;
-    let writtenSentenceArray: string[] = []
-    const stringWriter = () => {
-        if (i < sentence.length) {
-            if (index === 0) console.log(i, writtenSentenceArray)
-            writtenSentenceArray.push(sentence[i])
-            writtenSentences.value[index] = writtenSentenceArray.join('');
-            i++
-            setTimeout(stringWriter, 50)
+
+
+const writer = () => {
+    sentences.forEach((sentence, index) => {
+        let i = 0;
+        let writtenSentenceArray: string[] = []
+        const stringWriter = () => {
+            if (i < sentence.length) {
+
+                writtenSentenceArray.push(sentence[i])
+                writtenSentences.value[index] = writtenSentenceArray.join('');
+                i++
+                setTimeout(stringWriter, 50)
+            }
+            else return
         }
-        else return
-    }
-    stringWriter()
+        stringWriter()
 
-})
+    })
+    return undefined
+}
 
+import gsap from 'gsap';
+let ctx: any;
+
+onMounted(() => {
+    ctx = gsap.context((self) => {
+        gsap.from(".num", {
+            xPercent: -200,
+            rotation: 90,
+            stagger: 0.1,
+            scrollTrigger: {
+                trigger: ".sentence-cont",
+                markers: true,
+                start: "bottom bottom",
+                onEnter: writer
+
+            }
+        })
+
+    }); // <- Scope!
+});
+
+onUnmounted(() => {
+    ctx.revert(); // <- Easy Cleanup!
+});
 
 </script>
 
