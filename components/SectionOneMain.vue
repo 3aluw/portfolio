@@ -17,27 +17,26 @@
             </div>
             <Transition>
                 <div class="visitor-mesaage-cont py-4" v-show="showVisitorMessage">
-                    <div class="personal-infos flex justify-between float-right">
-                        <p class="name">Abdellah</p>
+                    <div class="personal-infos flex justify-between flex-row-reverse float-right">
                         <v-avatar>
                             <v-img src="/face.png" alt="John"></v-img>
                         </v-avatar>
+                        <p class="name">Abdellah</p>
                     </div>
-                    <p class="message-body  mr-12 float-left">
-                        Hi, <span> I'm Abdellah.</span> An aspiring web developer eager to seize the opportunity to learn,
-                        grow,
-                        and
-                        collaborate closely with other talented developers and enthusiastic managers
+                    <p class="message-body mr-12 clear-both float-right">
+                        {{ visitorMessage }}
                     </p>
-                    <div class="clear-both"></div>
                 </div>
             </Transition>
         </div>
+
+
+
         <div class="type-message-cont" v-if="!showVisitorMessage">
             <div class="flex items-center pr-2">
-                <v-textarea class="elevation-0 h-full" auto-grow rows="1" max-rows="3" theme="dark" bg-color="#41374E"
-                    variant="solo" label="type your message" placeholder="please insert your email too" base-color="white"
-                    hide-details :rules="textareaRules" validate-on="input lazy"></v-textarea>
+                <v-textarea v-model="visitorMessage" class="elevation-0 h-full" auto-grow rows="1" max-rows="3" theme="dark"
+                    bg-color="#41374E" variant="solo" label="type your message" placeholder="please insert your email too"
+                    base-color="white" hide-details :rules="textareaRules" validate-on="input lazy"></v-textarea>
                 <v-btn icon="mdi-send" color="white" variant="plain" :loading="sendingMessage" @click="sendMessage">
                     <template v-slot:loader>
                         <v-progress-circular indeterminate></v-progress-circular>
@@ -51,7 +50,34 @@
 <script setup lang="ts">
 const sendingMessage = ref(false)
 const showVisitorMessage = ref(false)
+
+const visitorMessage = ref('')
 const sendMessage = () => {
+    if (textareaRules[0](visitorMessage.value) !== true) return
+
+    fetch("https://getintotouch.sh20raj.com/api.php?id=1075809286", {
+        method: "POST",
+        body: `name=${visitorMessage.value}`,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+    })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response data as needed
+            console.log("data:", data);
+            if (data.status === 'success') {
+
+            } else if (data.status === 'failed') {
+
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            // Optionally, display an error message to the user
+
+        });
+
     sendingMessage.value = true;
     showVisitorMessage.value = true;
     setTimeout(() => (sendingMessage.value = false), 2000)
@@ -78,7 +104,7 @@ const textareaRules = [
 }
 
 .messages-cont {
-    min-height: 15rem;
+    min-height: 20rem;
 }
 
 .my-mesaage-cont {
