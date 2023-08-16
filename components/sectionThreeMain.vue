@@ -1,8 +1,8 @@
 <template>
-    <div class="s-three-main my-4 mx-10 pl-12 pr-4 pt-20 pb-8">
+    <div class="s-three-main my-4 pl-12 pr-4 pt-20 pb-8">
         <div class="sentence-cont flex mt-4" v-for="(sentence, index) in sentences">
             <div class="num">{{ index + 1 }}.</div>
-            <p> {{ sentence }} </p>
+            <p> {{ writtenSentences[index] }} </p>
         </div>
 
     </div>
@@ -12,6 +12,26 @@
 <script setup lang="ts">
 import sentences from "~/assets/aboutMe.json"
 
+const writtenSentences: Ref<string[]> = ref([]);
+
+sentences.forEach((sentence, index) => {
+    let i = 0;
+    let writtenSentenceArray: string[] = []
+    const stringWriter = () => {
+        if (i < sentence.length) {
+            if (index === 0) console.log(i, writtenSentenceArray)
+            writtenSentenceArray.push(sentence[i])
+            writtenSentences.value[index] = writtenSentenceArray.join('');
+            i++
+            setTimeout(stringWriter, 50)
+        }
+        else return
+    }
+    stringWriter()
+
+})
+
+
 </script>
 
 <style scoped>
@@ -20,7 +40,8 @@ import sentences from "~/assets/aboutMe.json"
 .s-three-main {
     background: url("~/assets/coding-bg.svg");
     background-size: cover;
-
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .num {
