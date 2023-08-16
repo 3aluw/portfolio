@@ -98,4 +98,11 @@ onUnmounted(() => {
     font-weight: 400;
     margin-inline-start: 0.8rem;
 }
+
+.num:nth-child(6),
+.num:nth-child(7) {
+    color: #F24E1E;
+    border-color: #F24E1E;
+    ;
+}
 </style>

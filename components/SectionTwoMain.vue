@@ -20,24 +20,21 @@
 import projects from "~/assets/projects.json";
 import gsap from 'gsap';
 let ctx;
-/*
+
 onMounted(() => {
     ctx = gsap.context((self) => {
 
-        gsap.to(".cards-md", {
-            yPercent: function (index, target, targets) {
-
-                return -(index + 1) * 100;
-            },
+        const cards = document.querySelectorAll(".project-cont");
+        gsap.from(".project-cont:not(:first-child)", {
+            yPercent: () => window.innerHeight,
             stagger: 0.5,
             scrollTrigger: {
                 trigger: ".s-two-main",
-                pin: ".s-two-main",
+                pin: true,
                 markers: true,
-                scrub: true,
+                scrub: 1,
                 start: "top top",
-                endTrigger: ".md-card:nth-child(5)",
-                end: "bottom top",
+                end: "=+2500px"
 
             }
         })
@@ -48,19 +45,23 @@ onMounted(() => {
 onUnmounted(() => {
     ctx.revert(); // <- Easy Cleanup!
 });
-*/
+
 
 </script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
-
+.s-two-main {
+    position: relative;
+    min-height: 100vh;
+}
 
 .project-cont {
     width: clamp(330px, 90%, 500px);
     box-shadow: 7px 10px 0px 0px #00000080;
     background: #FFF;
+    position: absolute;
 }
 
 .img-cont {
