@@ -1,5 +1,5 @@
 <template>
-    <div class="s-three-main my-4 pl-12 pr-4 pt-20 pb-8 overflow-hidden">
+    <div class="s-three-main my-4 pl-12 pr-4 pt-20 pb-8 mx-3 overflow-hidden">
         <div class="sentence-cont flex mt-4" v-for="(sentence, index) in sentences">
             <div class="num">{{ index + 1 }}.</div>
             <p> {{ writtenSentences[index] }} </p>
@@ -73,6 +73,9 @@ onUnmounted(() => {
     background-size: cover;
     max-width: 600px;
     margin: 0 auto;
+    filter: drop-shadow(-7px 8px 10px rgba(0, 0, 0, 0.25));
+
+
 }
 
 .num {

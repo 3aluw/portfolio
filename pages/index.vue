@@ -38,7 +38,7 @@ section {
 
 /*ssection One */
 .section-one {
-    background-color: #4B4453;
+    background: var(--bg-ltr);
 }
 
 .s-header {
@@ -51,10 +51,10 @@ section {
 }
 
 .section-two {
-    background: #5F5867;
+    background: var(--bg-rtl);
 }
 
 .section-three {
-    background: rgba(113, 106, 121, 0.83);
+    background: var(--bg-ltr);
 }
 </style>

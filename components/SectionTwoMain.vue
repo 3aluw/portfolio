@@ -59,7 +59,7 @@ onUnmounted(() => {
 }
 
 .project-cont {
-    width: clamp(330px, 90%, 500px);
+    width: clamp(250px, 90%, 500px);
     box-shadow: 7px 7px 16px 0px #00000026;
     background: #FFF;
     position: absolute;

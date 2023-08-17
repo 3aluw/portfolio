@@ -109,13 +109,15 @@ const textareaRules = [
 </script>
 <style>
 .s-one-main {
-    background: #928A9B;
-    min-height: 10rem;
+    background: hsla(268, 31%, 30%, 0.13);
+    box-shadow: 0px 4px 37px 0px rgba(44, 19, 62, 0.47);
+    min-height: 16rem;
+    margin-bottom: 2rem;
 
 }
 
 .messages-cont {
-    min-height: 20rem;
+    min-height: 16rem;
 }
 
 .my-mesaage-cont {
