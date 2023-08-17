@@ -160,9 +160,17 @@ const textareaRules = [
     position: absolute;
     bottom: 1px;
     left: 0;
+    width: 200%;
+}
+
+.visitor-mesaage-cont .personal-infos .name::after {
+    content: "just now";
+    color: #A0A0A0;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 1px;
     left: -80%;
     width: 200%;
-
 }
 
 .message-body {

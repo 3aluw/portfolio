@@ -17,7 +17,6 @@ const writtenSentences: Ref<string[]> = ref([]);
 
 
 const writer = () => {
-    console.log('called')
     sentences.forEach((sentence, index) => {
         let i = 0;
         let writtenSentenceArray: string[] = []
