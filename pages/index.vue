@@ -8,18 +8,19 @@
 
         <SectionOneMd class="md:hidden" />
         <SectionOneLg class="hidden md:block" />
-
         <LogoIcons position="bottom" />
     </section>
 
     <section class="section-two">
-        <p class="s-header yellow !text-4xl py-8"> Some projects</p>
-        <SectionTwoMd />
+        <p class="s-header accent !text-4xl py-8"> Some projects</p>
+        <SectionTwoMd class="md:hidden" />
+        <SectionTwoLg class="md:hidden" />
     </section>
 
     <section class="section-three">
-        <p class="s-header yellow !text-4xl py-8">About me</p>
-        <SectionThreeMain />
+        <p class="s-header accent !text-4xl py-8">About me</p>
+        <SectionThreeMd class="md:hidden" />
+        <SectionThreeLg class="hidden md:block" />
     </section>
     <footer>
         <Footer />
@@ -32,7 +33,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 .yellow {
-    color: #F9F871 !important
+    color: var(--green-accent) !important
 }
 
 section {

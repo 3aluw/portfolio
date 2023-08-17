@@ -16,7 +16,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup >
 import projects from "~/assets/projects.json";
 import gsap from 'gsap';
 let ctx;
