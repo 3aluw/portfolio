@@ -12,7 +12,7 @@
                 <p class="message-body ml-12">
                     Hi, <span> I'm Abdellah.</span> An aspiring web developer eager to seize the opportunity to learn, grow,
                     and
-                    collaborate closely with other talented developers and enthusiastic managers
+                    collaborate closely with other talented developers and enthusiastic clients/managers.
                 </p>
             </div>
             <Transition>
@@ -87,14 +87,11 @@ const sendMessage = () => {
             }
         })
         .catch(error => {
-            console.error("Error:", error);
-            // Optionally, display an error message to the user
-
         });
 
     sendingMessage.value = true;
     showVisitorMessage.value = true;
-    setTimeout(() => { sendingMessage.value = false; showMyReply.value = true }, 2000)
+    setTimeout(() => { sendingMessage.value = false; showMyReply.value = true }, 4000)
 }
 const messageValidation = ref('')
 

@@ -3,7 +3,7 @@
         <LogoIcons position="up" />
         <div class="text-center align-center mx-2 mb-8 mt-4">
             <p class="s-header inline-block">Coding with <span class="yellow">curiosity</span>,</p>
-            <p class="s-header inline-block pl-2"> Learning with <span class="yellow">purpose</span></p>
+            <p class="s-header inline-block pl-2"> Learning with <span class="yellow">purpose</span>.</p>
         </div>
         <SectionOneMain />
         <LogoIcons position="bottom" />
