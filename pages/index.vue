@@ -5,13 +5,16 @@
             <p class="s-header inline-block">Coding with <span class="yellow">curiosity</span>,</p>
             <p class="s-header inline-block pl-2"> Learning with <span class="yellow">purpose</span>.</p>
         </div>
-        <SectionOneMain />
+
+        <SectionOneMd class="md:hidden" />
+        <SectionOneLg class="hidden md:block" />
+
         <LogoIcons position="bottom" />
     </section>
 
     <section class="section-two">
         <p class="s-header yellow !text-4xl py-8"> Some projects</p>
-        <SectionTwoMain />
+        <SectionTwoMd />
     </section>
 
     <section class="section-three">

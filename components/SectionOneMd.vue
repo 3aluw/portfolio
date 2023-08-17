@@ -10,7 +10,8 @@
                     <p class="name">Abdellah</p>
                 </div>
                 <p class="message-body ml-12">
-                    Hi, <span> I'm Abdellah.</span> An aspiring web developer eager to seize the opportunity to learn, grow,
+                    Hi, <span> I'm Abdellah.</span> An aspiring web developer eager to seize the opportunity to learn,
+                    grow,
                     and
                     collaborate closely with other talented developers and enthusiastic clients/managers.
                 </p>
@@ -44,9 +45,6 @@
             </Transition>
 
         </div>
-
-
-
         <div class="type-message-cont" v-if="!showVisitorMessage">
             <div class="flex items-center pr-2">
                 <v-textarea v-model="visitorMessage" class="elevation-0 h-full" auto-grow rows="1" max-rows="3" theme="dark"
@@ -60,6 +58,13 @@
             </div>
             <small class="pl-4 text-red ">{{ messageValidation }}</small>
         </div>
+
+
+        <!--Large screens-->
+
+
+
+
     </div>
 </template>
 <script setup lang="ts">
@@ -107,7 +112,7 @@ const textareaRules = [
     }
 ]
 </script>
-<style>
+<style scoped>
 .s-one-main {
     background: hsla(268, 31%, 30%, 0.13);
     box-shadow: 0px 4px 37px 0px rgba(44, 19, 62, 0.47);
@@ -120,7 +125,7 @@ const textareaRules = [
     min-height: 16rem;
 }
 
-.my-mesaage-cont {
+.my-mesaage-cont:nth-child(1) {
     animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
