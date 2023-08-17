@@ -14,7 +14,7 @@
     <section class="section-two">
         <p class="s-header accent !text-4xl py-8"> Some projects</p>
         <SectionTwoMd class="md:hidden" />
-        <SectionTwoLg class="md:hidden" />
+        <SectionTwoLg class="hidden md:flex" />
     </section>
 
     <section class="section-three">

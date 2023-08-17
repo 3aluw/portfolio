@@ -20,7 +20,7 @@
 import projects from "~/assets/projects.json";
 import gsap from 'gsap';
 let ctx;
-
+/*
 onMounted(() => {
     ctx = gsap.context((self) => {
 
@@ -46,7 +46,7 @@ onUnmounted(() => {
     ctx.revert(); // <- Easy Cleanup!
 });
 
-
+*/
 </script>
 
 <style scoped>
