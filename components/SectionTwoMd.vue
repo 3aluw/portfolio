@@ -20,25 +20,29 @@
 import projects from "~/assets/projects.json";
 import gsap from 'gsap';
 let ctx;
-/*
+
 onMounted(() => {
     ctx = gsap.context((self) => {
 
         const cards = document.querySelectorAll(".project-cont");
-        gsap.from(".project-cont:not(:first-child)", {
-            yPercent: () => window.innerHeight,
-            stagger: 0.5,
-            scrollTrigger: {
-                trigger: ".s-two-main",
-                pin: ".section-two",
-                markers: true,
-                scrub: 1,
-                start: "-100px top",
-                end: "=+2500px"
+        let mm = gsap.matchMedia();
 
-            }
+        // add a media query. When it matches, the associated function will run
+        mm.add("(max-width: 768px)", () => {
+            gsap.from(".project-cont:not(:first-child)", {
+                yPercent: () => window.innerHeight,
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: ".s-two-main",
+                    pin: ".section-two",
+                    markers: true,
+                    scrub: 1,
+                    start: "-100px top",
+                    end: "=+2500px"
+
+                }
+            })
         })
-
     }); // <- Scope!
 });
 
@@ -46,7 +50,7 @@ onUnmounted(() => {
     ctx.revert(); // <- Easy Cleanup!
 });
 
-*/
+
 </script>
 
 <style scoped>

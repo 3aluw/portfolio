@@ -8,7 +8,8 @@
                         <div>Aspiring web developer eager to seize the opportunity to learn, grow, and collaborate closely
                             with
                             other talented developers and enthusiastic managers</div>
-                        <div class="btn-cont flex gap-2 justify-center"><v-btn prepend-icon="mdi:mdi-arrow-down">view my
+                        <div class="btn-cont flex gap-2 justify-center mt-4"><v-btn prepend-icon="mdi:mdi-arrow-down">view
+                                my
                                 projects</v-btn>
                             <v-btn append-icon="mdi:mdi-github">visit my Github</v-btn>
                         </div>

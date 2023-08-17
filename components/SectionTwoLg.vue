@@ -1,5 +1,5 @@
 <template>
-    <div class="s-two-main-lg flex justify-between px-4   py-4 pb-12 ">
+    <div class="s-two-main-lg flex justify-between px-8 py-4 pb-12 gap-4">
         <div class="left-side  flex flex-col ">
             <div class="project-cont-lg" v-for="project in projects">
                 <p class="project-title-lg py-2">{{ project.name }}</p>
@@ -12,6 +12,7 @@
         </div>
 
         <div class="right-side">
+            <div class="pin"></div>
             <div class="imgs-cont">
                 <div class="img-cont-lg" v-for="project in projects"><img :src="`${project.image}`" alt=""></div>
             </div>
@@ -45,7 +46,7 @@ onMounted(() => {
         let mm = gsap.matchMedia();
 
         // add a media query. When it matches, the associated function will run
-        mm.add("(min-width: 765px)", () => {
+        mm.add("(min-width: 768px)", () => {
 
             // this setup code only runs when viewport is at least 600px wide
             console.log("desktop")
@@ -70,26 +71,22 @@ onMounted(() => {
                 ScrollTrigger.create({
                     trigger: headline,
                     start: "top 80%",
-                    end: "top 50%",
+                    end: "top 10%",
                     animation: animation,
                     scrub: true,
-                    markers: false
+                    markers: true
                 })
             })
 
 
 
-            return () => { // optional
-                // custom cleanup code here (runs when it STOPS matching)
+            return () => {
+                ctx.revert();
                 console.log("mobile")
             };
         });
     })
 });
-onUnmounted(() => {
-    ctx.revert(); // <- Easy Cleanup!
-});
-
 
 
 
@@ -103,6 +100,7 @@ onUnmounted(() => {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
+    max-width: 1400px;
 }
 
 .project-cont-lg {
@@ -125,7 +123,7 @@ onUnmounted(() => {
 .project-desc {
     font-feature-settings: 'clig' off, 'liga' off;
     font-family: 'Open Sans';
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-style: normal;
     text-align: left;
     font-weight: 700;
@@ -155,5 +153,10 @@ onUnmounted(() => {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.v-btn {
+    background: var(--green-accent);
+    color: white;
 }
 </style>
