@@ -160,6 +160,9 @@ const textareaRules = [
     position: absolute;
     bottom: 1px;
     left: 0;
+    left: -80%;
+    width: 200%;
+
 }
 
 .message-body {

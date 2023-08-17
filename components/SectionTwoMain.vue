@@ -30,10 +30,10 @@ onMounted(() => {
             stagger: 0.5,
             scrollTrigger: {
                 trigger: ".s-two-main",
-                pin: true,
+                pin: ".section-two",
                 markers: true,
                 scrub: 1,
-                start: "top top",
+                start: "-100px top",
                 end: "=+2500px"
 
             }
@@ -63,6 +63,8 @@ onUnmounted(() => {
     box-shadow: 7px 7px 16px 0px #00000026;
     background: #FFF;
     position: absolute;
+    margin-bottom: 12rem;
+
 }
 
 

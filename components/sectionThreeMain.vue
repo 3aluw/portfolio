@@ -46,11 +46,12 @@ onMounted(() => {
         gsap.from(".num", {
             xPercent: -200,
             rotation: 90,
-            stagger: 0.1,
+            duration: 5,
+            stagger: 0.5,
             scrollTrigger: {
                 trigger: ".sentence-cont",
                 markers: true,
-                start: "bottom bottom",
+                start: "bottom top",
                 onEnter: writer,
 
             }
