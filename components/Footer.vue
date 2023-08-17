@@ -37,6 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .link:hover {
@@ -65,5 +66,21 @@
 
 .link:nth-child(4) {
     background: #FC471E;
+}
+
+@media(min-width:768px) {
+    .footer-cont {
+        background: var(--bg-ltr);
+        display: flex;
+    }
+
+    .footer-cont>p {
+        flex-grow: 1;
+    }
+
+    .links {
+        grid-template-columns: repeat(4, 1fr);
+        flex-grow: 1;
+    }
 }
 </style>
