@@ -6,27 +6,36 @@
             <p class="s-header inline-block pl-2"> Learning with <span class="yellow">purpose</span>.</p>
         </div>
 
-        <SectionOneMd class="md:hidden" />
-        <SectionOneLg class="hidden md:block" />
+        <SectionOneMd class="md:hidden" v-if="md" />
+        <SectionOneLg class="hidden md:block" v-if="!md" />
         <LogoIcons position="bottom" />
     </section>
 
     <section class="section-two">
         <p class="s-header accent !text-4xl py-8"> Some projects</p>
-        <SectionTwoMd class="md:hidden" />
-        <SectionTwoLg class="hidden md:flex" />
+        <SectionTwoMd class="md:hidden" v-if="md" />
+        <SectionTwoLg class="hidden md:flex" v-if="!md" />
     </section>
 
     <section class="section-three">
         <p class="s-header accent !text-4xl py-8">About me</p>
-        <SectionThreeMd class="md:hidden" />
-        <SectionThreeLg class="hidden md:block" />
+        <SectionThreeMd class="md:hidden" v-if="md" />
+        <SectionThreeLg class="hidden md:block" v-if="!md" />
     </section>
     <footer>
         <Footer />
     </footer>
 </template>
 <script setup lang="ts">
+
+const md = ref(true)
+onMounted(() => {
+    const matchMd = window?.matchMedia('(max-width: 768px)')
+    matchMd.matches ? md.value = true : md.value = false
+
+    matchMd.addEventListener('change', (e) => { e.matches ? md.value = true : md.value = false; console.log(md.value) })
+})
+
 
 </script>
 <style >

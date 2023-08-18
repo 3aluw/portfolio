@@ -107,6 +107,7 @@ onMounted(() => {
 
     margin-bottom: 12rem;
     color: white;
+    border-radius: 5px;
 
 }
 

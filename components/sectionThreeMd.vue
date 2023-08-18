@@ -1,5 +1,5 @@
 <template>
-    <div class="s-three-main my-4 pl-12 pr-4 pt-20 pb-8 mx-3 overflow-hidden">
+    <div class="s-three-main my-4 pl-12 pr-4 pt-20 pb-8  overflow-hidden">
         <div class="sentence-cont flex mt-4" v-for="(sentence, index) in sentences">
             <div class="num">{{ index + 1 }}.</div>
             <p> {{ writtenSentences[index] }} </p>
@@ -42,18 +42,22 @@ let ctx: any;
 
 onMounted(() => {
     ctx = gsap.context((self) => {
-        gsap.from(".num", {
-            xPercent: -200,
-            rotation: 90,
-            duration: 5,
-            stagger: 0.5,
-            scrollTrigger: {
-                trigger: ".sentence-cont",
-                markers: true,
-                start: "bottom top",
-                onEnter: writer,
+        let mm = gsap.matchMedia();
 
-            }
+        mm.add("(max-width: 768px)", () => {
+            gsap.from(".num", {
+                xPercent: -200,
+                rotation: 90,
+                duration: 5,
+                stagger: 0.5,
+                scrollTrigger: {
+                    trigger: ".sentence-cont",
+                    markers: true,
+                    start: "bottom top",
+                    onEnter: writer,
+
+                }
+            })
         })
 
     }); // <- Scope!

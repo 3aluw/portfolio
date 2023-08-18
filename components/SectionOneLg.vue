@@ -93,5 +93,6 @@ img {
     text-transform: lowercase;
     background: var(--green-accent);
     color: white;
+    flex-wrap: wrap-reverse;
 }
 </style>
