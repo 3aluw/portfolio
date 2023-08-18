@@ -2,7 +2,7 @@
     <div class="cont">
         <h1 class="text-center title"> Visit Algeria </h1>
         <div class="tech-used">tech used : </div>
-        <main class="main-content">
+        <main class="main-content pb-8">
             <div class="motivation">
                 <h2>Motivation:</h2>
                 <p>Algeria, a vast and captivating country, is a treasure trove of natural beauty, rich history, and diverse
@@ -83,13 +83,14 @@ const icons = []
 
 
 .cont {
-    max-width: 800px;
+    max-width: 850px;
+    padding-inline: 1rem;
     margin: 0 auto;
     background: #F5F4F4;
 }
 
 .title {
-    color: #000;
+    color: var(--green-accent);
     font-family: 'Inter';
     font-size: 2rem;
     font-style: normal;
@@ -116,6 +117,12 @@ const icons = []
     font-weight: 400;
     line-height: normal;
     padding-top: 2rem;
-    padding-bottom: 1rem;
+}
+
+.main-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: "inter" "serif";
+    padding-top: 0.5rem;
 }
 </style>

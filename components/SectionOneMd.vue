@@ -2,7 +2,7 @@
     <div class="s-one-main">
         <div class="messages-cont">
 
-            <div class="my-mesaage-cont py-4">
+            <div class="my-message-cont py-4">
                 <div class="personal-infos flex justify-between ">
                     <v-avatar>
                         <v-img src="/face.png" alt="John"></v-img>
@@ -17,7 +17,7 @@
                 </p>
             </div>
             <Transition>
-                <div class="visitor-mesaage-cont py-4" v-show="showVisitorMessage">
+                <div class="visitor-message-cont py-4" v-show="showVisitorMessage">
                     <div class="personal-infos flex justify-between flex-row-reverse float-right">
                         <v-avatar>
                             <v-img src="/alien.svg" alt="John"></v-img>
@@ -105,8 +105,8 @@ const messageValidation = ref('')
 const textareaRules = [
     (value: string) => {
         const reg = /\b[a-z0-9-_.]+@[a-z0-9-_.]+(\.[a-z0-9]+)+/i
-        if (value.length < 20) { messageValidation.value = 'too short messsage'; return false }
-        else if (value.length > 1000) { messageValidation.value = 'your messsage is too long'; return false }
+        if (value.length < 20) { messageValidation.value = 'too short message'; return false }
+        else if (value.length > 1000) { messageValidation.value = 'your message is too long'; return false }
         else if (!reg.test(value)) { messageValidation.value = 'please insert you email'; return false }
         else { messageValidation.value = ''; return true }
     }
@@ -125,7 +125,7 @@ const textareaRules = [
     min-height: 16rem;
 }
 
-.my-mesaage-cont:nth-child(1) {
+.my-message-cont:nth-child(1) {
     animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
@@ -168,7 +168,7 @@ const textareaRules = [
     width: 200%;
 }
 
-.visitor-mesaage-cont .personal-infos .name::after {
+.visitor-message-cont .personal-infos .name::after {
     content: "just now";
     color: #A0A0A0;
     font-size: 0.75rem;
@@ -203,7 +203,7 @@ const textareaRules = [
 
 }
 
-.visitor-mesaage-cont .message-body {
+.visitor-message-cont .message-body {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0rem;
     margin-left: 0.5rem;
