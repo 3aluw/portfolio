@@ -1,5 +1,5 @@
 <template>
-    <div class="s-two-main-lg flex justify-between px-8 py-4 pb-12 gap-4">
+    <div class="s-two-main-lg flex justify-between px-4 py-4 pb-12 gap-4">
         <div class="left-side  flex flex-col ">
             <div class="project-cont-lg" v-for="project in projects">
                 <p class="project-title-lg py-2">{{ project.name }}</p>
@@ -74,7 +74,7 @@ onMounted(() => {
                     end: "top 10%",
                     animation: animation,
                     scrub: true,
-                    markers: true
+                    markers: false
                 })
             })
 
@@ -137,7 +137,7 @@ onMounted(() => {
 .imgs-cont {
     overflow: hidden;
     position: relative;
-    width: clamp(400px, 40vw, 700px);
+    width: clamp(250px, 40vw, 700px);
     aspect-ratio: 1 / 1;
 
 }
