@@ -1,11 +1,12 @@
 <template>
-    <div class="s-two-main-lg flex justify-between px-4 py-4 pb-12 gap-4">
+    <div class="s-two-main-lg flex justify-around px-4 py-4 pb-12 gap-4">
         <div class="left-side  flex flex-col ">
             <div class="project-cont-lg" v-for="project in projects">
                 <p class="project-title-lg py-2">{{ project.name }}</p>
                 <p class="project-desc ">{{ project.description }}</p>
                 <div class="btns-cont flex justify-center align-center gap-3 mx-2">
-                    <v-btn density="comfortable" prepend-icon="mdi:mdi-github"> View on Github</v-btn>
+                    <NuxtLink :to="project.github" target="_blank" rel="noopener"> <v-btn density="comfortable"
+                            prepend-icon="mdi:mdi-github"> View on Github</v-btn></NuxtLink>
                     <v-btn density="comfortable" append-icon="mdi:mdi-open-in-new"> More infos</v-btn>
                 </div>
             </div>
@@ -134,11 +135,17 @@ onMounted(() => {
     margin-top: 30vh;
 }
 
+.right-side {
+    max-width: 40vw
+}
+
 .imgs-cont {
     overflow: hidden;
     position: relative;
-    width: clamp(250px, 40vw, 700px);
+    width: clamp(250px, 35vw, 700px);
     aspect-ratio: 1 / 1;
+    border-radius: 25px;
+    box-shadow: white 2px 2px 4px 0px;
 
 }
 

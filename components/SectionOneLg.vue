@@ -19,7 +19,7 @@
 
             </div>
             <div class="pic-cont">
-                <img src="/face.png" alt="">
+                <img src="~/assets/face.png" alt="">
             </div>
 
         </div>

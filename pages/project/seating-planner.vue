@@ -52,6 +52,12 @@
                             planner's functionality</p>
                     </li>
                     <li>
+                        <h3>upgrade the playground UI</h3>
+                        <p>The playground has a simple-white background Ui, It needs to be replaced by a modern one, but I
+                            didn't figure it out yet
+                        </p>
+                    </li>
+                    <li>
                         <h3>save for Future Use</h3>
                         <p>allowing users to save and revisit seating plans aligns with the planner's evolution. This
                             functionality

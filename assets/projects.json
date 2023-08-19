@@ -1,38 +1,44 @@
- [
+[
     {
         "name": "visit Algeria",
         "description": "A website to introduce Algeria's city for tourists",
         "image": "/project-pics/visit-algeria.png",
-        "url":"/visit-algeria"
+        "url": "/visit-algeria",
+        "github": "https://github.com/3aluw/visitAlgeria"
     },
     {
         "name": "color generator",
         "description": "it helps devs to generate color palletes for their sites",
         "image": "/project-pics/color-generator.png",
-        "url":"/color-generator"
+        "url": "/color-generator",
+        "github": "https://github.com/3aluw/color-palette-generator"
     },
     {
         "name": "My ecommerce store",
         "description": "An e-store that sells some interesting goods! ",
         "image": "/project-pics/ecom-store.png",
-        "url":"/ecom-store"
+        "url": "/ecom-store",
+        "github": "https://github.com/3aluw/Store"
     },
     {
         "name": "a calculator for teachers",
-        "description": "It can help teachers in duanting marks'calcualtion",
+        "description": "It can help teachers in daunting marks'calcualtion",
         "image": "/project-pics/teacher-calculator.png",
-        "url":"/teacher-calculator"
+        "url": "/teacher-calculator",
+        "github": "https://github.com/3aluw/teachers-calculator"
     },
     {
         "name": "seating plan generator",
         "description": "It can help teachers to manage their seating plans",
         "image": "/project-pics/seating-planer.png",
-        "url":"/seating-planner"
+        "url": "/seating-planner",
+        "github": "https://github.com/3aluw/seating-plan"
     },
     {
         "name": "interactive leaderboard",
         "description": "it organises any kind of game",
         "image": "/project-pics/interactive-leaderboard.png",
-        "url":"/leaderboard-planer"
+        "url": "/leaderboard-planer",
+        "github": "https://github.com/3aluw/interactive-leaderboard"
     }
 ]
