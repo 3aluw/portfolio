@@ -1,6 +1,6 @@
 <template>
     <div class="s-three-main my-4 pl-12 pr-4 pt-20 pb-8  overflow-hidden">
-        <div class="sentence-cont flex mt-4" v-for="(sentence, index) in sentences">
+        <div class="sentence-cont flex " v-for="(sentence, index) in sentences">
             <div class="num">{{ index + 1 }}.</div>
             <p> {{ writtenSentences[index] }} </p>
         </div>
