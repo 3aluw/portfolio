@@ -3,7 +3,7 @@
         <h1 class="text-center title"> E-commerce store </h1>
         <div class="tech-used flex justify-center items-center gap-4 mt-8">
             <div class="tech flex gap-2"> Highlights of the tech used :
-                <img src="~/assets/logos/typescript.svg" alt="" width="20" height="20">
+                <img src="~/assets/logos/TypeScript.svg" alt="" width="20" height="20">
                 <img src="~/assets/logos/nuxt.svg" alt="" width="20" height="20">
                 <img src="~/assets/logos/contentful.png" alt="" width="20" height="20">
                 <img src="~/assets/logos/deskree.png" alt="" width="20" height="20">
