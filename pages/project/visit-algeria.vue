@@ -33,14 +33,14 @@
                     <li>
                         <h3> Design and UI/UX</h3>
                         <p> Crafting an intuitive and visually pleasing user interface was a significant challenge. Deciding
-                            on a color palette and arranging the content (espiecally cities) seamlessly required
+                            on a color palette and arranging the content (especially cities) seamlessly required
                             careful consideration as I revised teh Ui several times, as I was't happy even with the final
                             design.</p>
 
                     </li>
                     <li>
                         <h3>Data Integration</h3>
-                        <p> an Algerian news API to provide users with up-to-date informations to the users. However,
+                        <p> an Algerian news API to provide users with up-to-date information to the users. However,
                             sourcing a suitable
                             API proved to be a time-consuming task due to limited suitable options available.</p>
                     </li>
@@ -48,7 +48,7 @@
                 </p>
             </div>
             <div class="improvments">
-                <h2>possible improvments:</h2>
+                <h2>possible improvements:</h2>
                 <p>
                 <ul>
                     <li>

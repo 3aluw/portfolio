@@ -32,12 +32,12 @@
                         <h3>Integrating teh template with Nuxt 3</h3>
                         <p>Integrating the chosen template with Nuxt, my trusty web framework, was trickier than aI thought
                             as the template had its own fancy third-party CSS and JS, mixed up with those CSS variables (oh,
-                            the learning opportunity!). So, I had to roll up my sleeves and deal whith that</p>
+                            the learning opportunity!). So, I had to roll up my sleeves and deal with that</p>
                     </li>
                 </ul>
             </div>
             <div>
-                <h2>possible improvments:</h2>
+                <h2>possible improvements:</h2>
                 <ul>
                     <li>
                         <h3>Slick New Templates</h3>
