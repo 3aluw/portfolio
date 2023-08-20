@@ -33,7 +33,7 @@ onMounted(() => {
     const matchMd = window?.matchMedia('(max-width: 768px)')
     matchMd.matches ? md.value = true : md.value = false
 
-    matchMd.addEventListener('change', (e) => { e.matches ? md.value = true : md.value = false; console.log(md.value) })
+    matchMd.addEventListener('change', (e) => { e.matches ? md.value = true : md.value = false; })
 })
 
 

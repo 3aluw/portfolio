@@ -53,7 +53,7 @@ onMounted(() => {
         mm.add("(min-width: 768px)", () => {
 
             // this setup code only runs when viewport is at least 600px wide
-            console.log("desktop")
+
 
             ScrollTrigger.create({
                 trigger: ".s-two-main-lg",
@@ -86,7 +86,7 @@ onMounted(() => {
 
             return () => {
                 ctx.revert();
-                console.log("mobile")
+
             };
         });
     })
