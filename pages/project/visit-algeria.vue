@@ -1,7 +1,18 @@
 <template>
     <div class="cont">
-        <h1 class="text-center title"> Visit Algeria </h1>
-        <div class="tech-used">tech used : </div>
+        <h1 class="text-center title pt-4"> Visit Algeria </h1>
+
+        <div class="tech-used flex justify-center items-center gap-4 mt-8">
+            <div class="tech flex gap-2">Highlights of the tech used :
+                <img src="~/assets/logos/Figma.svg" alt="" width="20" height="20">
+                <img src="~/assets/logos/contentful.png" alt="" width="20" height="20">
+                <img src="~/assets/logos/swiper.svg" alt="" width="20" height="20">
+            </div>
+            <NuxtLink :to="projectObject.demo" target="_blank" rel="noopener"> <v-btn density="comfortable"
+                    append-icon="mdi:mdi-play-outline" variant="outlined"> live
+                    Demo</v-btn></NuxtLink>
+        </div>
+
         <main class="main-content pb-8">
             <div class="motivation">
                 <h2>Motivation:</h2>
@@ -75,7 +86,13 @@
     </div>
 </template>
 <script setup>
-const icons = []
+import projects from "~/assets/projects.json";
+const route = useRoute()
+const projectRoute = route.path.replace("/project", "")
+const projectObject = projects.find((project) => project.url === projectRoute)
+
+
+
 </script>
 
 <style scoped>

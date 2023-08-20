@@ -2,12 +2,21 @@
     <div class="footer-cont">
         <p>happy to hear from you on :</p>
         <div class="links">
-            <div class="link">
-                <img src="~/assets/logos/linkedin.svg" alt="">
-            </div>
-            <div class="link"><img src="~/assets/logos/mail.svg" alt=""></div>
-            <div class="link"><img src="~/assets/logos/twitter.svg" alt=""></div>
-            <div class="link"><img src="~/assets/logos/reddit.svg" alt=""></div>
+            <NuxtLink to="https://www.linkedin.com/in/abdellah-houache-479256185/" class="link" target="_blank"
+                rel="noopener">
+                <div>
+                    <img src="~/assets/logos/linkedin.svg" alt="">
+                </div>
+            </NuxtLink>
+            <NuxtLink class="link" to="mailto:2000abdallah2014@gmail.com" target="_blank" rel="noopener">
+                <div><img src="~/assets/logos/mail.svg" alt=""></div>
+            </NuxtLink>
+            <NuxtLink class="link" to="https://twitter.com/3aluwa" target="_blank" rel="noopener">
+                <div><img src="~/assets/logos/twitter.svg" alt=""></div>
+            </NuxtLink>
+            <NuxtLink class="link" to="https://www.reddit.com/user/3aluw" target="_blank" rel="noopener">
+                <div><img src="~/assets/logos/reddit.svg" alt=""></div>
+            </NuxtLink>
 
         </div>
     </div>

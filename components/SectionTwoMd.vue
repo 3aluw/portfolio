@@ -9,7 +9,9 @@
                 <div class="btns-cont flex justify-end align-center gap-3 mx-2">
                     <NuxtLink :to="project.github" target="_blank" rel="noopener"> <v-btn density="comfortable"
                             icon="mdi:mdi-github"></v-btn></NuxtLink>
-                    <v-btn density="comfortable" icon="mdi:mdi-open-in-new"> </v-btn>
+                    <NuxtLink :to="`project${project.url}`"> <v-btn density="comfortable" icon="mdi:mdi-open-in-new">
+                        </v-btn>
+                    </NuxtLink>
                 </div>
             </div>
 
