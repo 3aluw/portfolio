@@ -2,7 +2,7 @@
     <div class="upper-icons flex justify-around w-full h-12 items-end" v-if="props.position === 'up'">
         <img src="~/assets/logos/nuxt.svg" class="logo " />
         <img src="~/assets/logos/Vue.svg" class="logo" />
-        <img src="~/assets/logos/TypeScript.svg" class="logo" />
+        <img src="~/assets/logos/typescript.svg" class="logo" />
         <img src="~/assets/logos/TailwindCSS.svg" class="logo" />
     </div>
 
