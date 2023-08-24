@@ -38,7 +38,7 @@ onMounted(() => {
                 scrollTrigger: {
                     trigger: ".s-two-main",
                     pin: ".section-two",
-                    markers: true,
+                    markers: false,
                     scrub: 1,
                     start: "-100px top",
                     end: "=+2500px"
