@@ -5,7 +5,7 @@
             <div class="my-message-cont py-4">
                 <div class="personal-infos flex justify-between ">
                     <v-avatar>
-                        <v-img src="~/assets/face.png" alt="John"></v-img>
+                        <v-img src="/face.png" alt="my avatar"></v-img>
                     </v-avatar>
                     <p class="name">Abdellah</p>
                 </div>

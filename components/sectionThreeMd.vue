@@ -13,10 +13,12 @@
 import sentences from "~/assets/aboutMe.json"
 
 const writtenSentences: Ref<string[]> = ref([]);
-
+import gsap from 'gsap';
+let ctx: any;
 
 
 const writer = () => {
+    console.log("start")
     sentences.forEach((sentence, index) => {
         let i = 0;
         let writtenSentenceArray: string[] = []
@@ -37,8 +39,7 @@ const writer = () => {
     return undefined
 }
 
-import gsap from 'gsap';
-let ctx: any;
+
 
 onMounted(() => {
     ctx = gsap.context((self) => {
@@ -47,13 +48,12 @@ onMounted(() => {
         mm.add("(max-width: 768px)", () => {
             gsap.from(".num", {
                 xPercent: -200,
-                rotation: 90,
-                duration: 5,
-                stagger: 0.5,
+                duration: 1,
+                stagger: 0.2,
                 scrollTrigger: {
                     trigger: ".sentence-cont",
-                    markers: false,
-                    start: "bottom top",
+                    markers: true,
+                    start: "-200px top",
                     onEnter: writer,
 
                 }
@@ -80,6 +80,10 @@ onUnmounted(() => {
     filter: drop-shadow(-7px 8px 10px rgba(0, 0, 0, 0.25));
 
 
+}
+
+.sentence-cont {
+    overflow: hidden
 }
 
 .num {

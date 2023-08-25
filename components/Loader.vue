@@ -26,6 +26,7 @@ p {
     font-family: 'Libre Baskerville', serif;
     font-size: 2rem;
     color: white;
+    padding-inline: 1rem;
 }
 
 #loader {
