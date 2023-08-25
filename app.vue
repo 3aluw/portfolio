@@ -1,6 +1,13 @@
 <template>
   <div>
-    <NuxtPage />
+    <Transition>
+      <Loader v-if="!showPages" class="absolute" />
+    </Transition>
+
+    <NuxtPage v-if="showPages" />
+
+
+
   </div>
 </template>
 <script setup lang="ts">
@@ -9,8 +16,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-
-
+const showPages = ref(false)
+onMounted(() => { showPages.value = true })
 
 </script>
 <style>
@@ -25,5 +32,17 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   html {
     font-size: 14px;
   }
+}
+
+/* we will explain what these classes do next! */
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.2s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+
 }
 </style>

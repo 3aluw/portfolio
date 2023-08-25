@@ -11,6 +11,7 @@
         <LogoIcons position="bottom" />
     </section>
 
+
     <section class="section-two">
         <p class="s-header accent !text-4xl py-8"> Some projects</p>
         <SectionTwoMd class="md:hidden" v-if="md" />
@@ -37,6 +38,7 @@ onMounted(() => {
 })
 
 
+
 </script>
 <style >
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
@@ -49,7 +51,7 @@ section {
     padding-block: 2rem;
 }
 
-/*ssection One */
+/*section One */
 .section-one {
     background: var(--bg-ltr);
 }
