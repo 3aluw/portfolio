@@ -52,7 +52,7 @@ onMounted(() => {
                 stagger: 0.2,
                 scrollTrigger: {
                     trigger: ".sentence-cont",
-                    markers: true,
+                    markers: false,
                     start: "-200px top",
                     onEnter: writer,
 

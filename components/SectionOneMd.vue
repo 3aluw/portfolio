@@ -127,6 +127,7 @@ const textareaRules = [
 
 .my-message-cont:nth-child(1) {
     animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation-delay : 2s;
 }
 
 @keyframes slideInFromLeft {
