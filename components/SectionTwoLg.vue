@@ -6,7 +6,8 @@
                 <p class="project-desc ">{{ project.description }}</p>
                 <div class="btns-cont flex justify-center align-center gap-3 mx-2">
                     <NuxtLink :to="project.github" target="_blank" rel="noopener"> <v-btn density="comfortable"
-                            prepend-icon="mdi:mdi-github"> View on Github</v-btn></NuxtLink>
+                            class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github"> View on Github</v-btn>
+                    </NuxtLink>
                     <NuxtLink :to="`project${project.url}`"><v-btn density="comfortable" append-icon="mdi:mdi-open-in-new">
                             More
                             infos</v-btn>
@@ -169,5 +170,14 @@ onMounted(() => {
 .v-btn {
     background: var(--green-accent);
     color: white;
+}
+
+.btn-outlined {
+    background: unset;
+    border-color: var(--green-accent);
+}
+
+.btn-outlined .v-btn__prepend i {
+    color: var(--green-accent);
 }
 </style>

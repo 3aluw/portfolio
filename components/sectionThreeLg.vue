@@ -2,7 +2,7 @@
     <div class="my-8">
         <div class="s-three-main mx-8 flex justify-between ">
             <div class="flex flex-col justify-around text-cont">
-                <div class="sentence-cont flex mt-4" v-for="(sentence, index) in sentences">
+                <div class="sentence-cont flex " v-for="(sentence, index) in sentences">
                     <img :src="icons[index]" class="w-4 icon">
 
                     <p> {{ sentence }} </p>
