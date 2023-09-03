@@ -22,7 +22,37 @@
 
 <script setup>
 import projects from "~/assets/projects.json";
+let ctx;
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+onMounted(() => {
+    ctx = gsap.context((self) => {
+
+
+        let mm = gsap.matchMedia();
+
+        // add a media query. When it matches, the associated function will run
+        mm.add("(max-width: 768px)", () => {
+            ScrollTrigger.batch(".project-cont", {
+                once: true,
+                start: "top center",
+                onEnter: batch => gsap.to(batch, { xPercent: 150 }),
+
+            })
+
+
+
+        })
+    }); // <- Scope!
+});
+
+onUnmounted(() => {
+    ctx.revert(); // <- Easy Cleanup!
+});
+
+//stacking cards animation
 /*
 let ctx;
 
@@ -71,6 +101,7 @@ onUnmounted(() => {
     width: clamp(250px, 90%, 500px);
     box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.10);
     border-radius: 0.125rem;
+    transform: translateX(-150%);
 
 }
 
