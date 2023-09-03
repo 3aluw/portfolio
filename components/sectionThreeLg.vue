@@ -1,14 +1,14 @@
 <template>
     <div class="my-8">
-        <div class="s-three-main mx-8 flex justify-between ">
-            <div class="flex flex-col justify-around text-cont">
+        <div class="s-three-main mx-8 flex justify-between  ">
+            <div class="flex flex-col justify-around text-cont gap-4 py-4 md:py-0 md:gap-0">
                 <div class="sentence-cont flex " v-for="(sentence, index) in sentences">
                     <img :src="icons[index]" class="w-4 icon">
 
                     <p> {{ sentence }} </p>
                 </div>
             </div>
-            <div class="pic-cont"><img src="~/assets/developer.png" alt=""></div>
+            <div class="pic-cont hidden md:block"><img src="~/assets/developer.png" alt=""></div>
 
         </div>
     </div>
@@ -51,8 +51,8 @@ onMounted(() => {
             stagger: 0.2,
             scrollTrigger: {
                 trigger: ".sentence-cont",
-                markers: false,
-                start: "bottom top",
+                markers: true,
+                start: "bottom 50%",
 
 
             }

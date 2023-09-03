@@ -20,8 +20,8 @@
 
     <section class="section-three">
         <p class="s-header accent !text-4xl py-8">About me</p>
-        <SectionThreeMd class="md:hidden" v-if="md" />
-        <SectionThreeLg class="hidden md:block" v-if="!md" />
+        <!--  <SectionThreeMd class="md:hidden" v-if="md" />-->
+        <SectionThreeLg />
     </section>
     <footer>
         <Footer />
