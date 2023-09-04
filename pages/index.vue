@@ -2,8 +2,8 @@
     <section class="section-one">
         <LogoIcons position="up" />
         <div class="text-center align-center mx-2 mb-8 mt-4">
-            <p class="s-header inline-block">Coding with <span class="yellow">curiosity</span>,</p>
-            <p class="s-header inline-block pl-2"> Learning with <span class="yellow">purpose</span>.</p>
+            <p class="s-header inline-block">Coding with <span class="accent-text">curiosity</span>,</p>
+            <p class="s-header inline-block pl-2"> Learning with <span class="accent-text">purpose</span>.</p>
         </div>
 
         <SectionOneMd class="md:hidden" v-if="md" />
@@ -12,7 +12,7 @@
     </section>
 
 
-    <section class="section-two">
+    <section class="section-two" id="section-two">
         <p class="s-header accent !text-4xl py-8"> Some projects</p>
         <SectionTwoMd class="md:hidden" v-if="md" />
         <SectionTwoLg class="hidden md:flex" v-if="!md" />
@@ -20,8 +20,8 @@
 
     <section class="section-three">
         <p class="s-header accent !text-4xl py-8">About me</p>
-        <SectionThreeMd class="md:hidden" v-if="md" />
-        <SectionThreeLg class="hidden md:block" v-if="!md" />
+        <!--  <SectionThreeMd class="md:hidden" v-if="md" />-->
+        <SectionThreeLg />
     </section>
     <footer>
         <Footer />
@@ -43,8 +43,8 @@ onMounted(() => {
 <style >
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
-.yellow {
-    color: var(--green-accent) !important
+.accent-text {
+    color: var(--green-accent-text) !important
 }
 
 section {

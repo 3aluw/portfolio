@@ -126,8 +126,9 @@ const textareaRules = [
 }
 
 .my-message-cont:nth-child(1) {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-    animation-delay : 2s;
+    animation: 1s ease-out forwards slideInFromLeft;
+    animation-delay: 2s;
+    opacity: 0;
 }
 
 @keyframes slideInFromLeft {
@@ -186,7 +187,7 @@ const textareaRules = [
     margin-right: 0.5rem;
     padding: 1rem;
     color: white;
-    font-family: Inter;
+
 }
 
 .message-body span {

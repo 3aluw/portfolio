@@ -1,7 +1,7 @@
 [
     {
         "name": "visit Algeria",
-        "description": "A website to introduce Algeria's city for tourists",
+        "description": "A website to introduce Algeria's cities for tourists",
         "image": "/project-pics/visit-algeria.png",
         "url": "/visit-algeria",
         "github": "https://github.com/3aluw/visitAlgeria",

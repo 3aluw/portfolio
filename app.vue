@@ -22,10 +22,15 @@ onMounted(() => { showPages.value = true })
 </script>
 <style>
 :root {
-  --bg-ltr: linear-gradient(135deg, #210734 0%, rgba(33, 7, 52, 0.87) 98.67%);
-  --bg-rtl: linear-gradient(45deg, #210734 0%, rgba(33, 7, 52, 0.87) 100%);
+  --bg-ltr: #3A2E5D;
+  --bg-rtl: #3A2E5D;
   --green-accent: hsla(153, 48%, 49%, 1);
   --yellow-accent: #F9F871;
+  --green-accent-text: #00C8A1
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media(max-width: 650px) {

@@ -8,10 +8,14 @@
                         <div>Aspiring web developer eager to seize the opportunity to learn, grow, and collaborate closely
                             with
                             other talented developers and enthusiastic managers</div>
-                        <div class="btn-cont flex gap-2 justify-center mt-4"><v-btn prepend-icon="mdi:mdi-arrow-down">view
-                                my
-                                projects</v-btn>
-                            <v-btn append-icon="mdi:mdi-github">visit my Github</v-btn>
+
+                        <div class="btn-cont flex gap-2 justify-center mt-4 flex-wrap-reverse">
+                            <a href="#section-two"> <v-btn class="btn-outlined" variant="outlined"
+                                    prepend-icon="mdi:mdi-arrow-down">view
+                                    my projects</v-btn></a>
+                            <NuxtLink class="link" to="https://github.com/3aluw" target="_blank" rel="noopener">
+                                <v-btn append-icon="mdi:mdi-github">visit my Github</v-btn>
+                            </NuxtLink>
                         </div>
                     </div>
 
@@ -28,6 +32,7 @@
 <script setup lang="ts"></script>
 <style scoped>
 @import url('https://fonts.cdnfonts.com/css/dubai');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
 .accent {
     color: var(--green-accent);
@@ -44,7 +49,7 @@
 }
 
 .background-cont {
-    background: rgba(56, 30, 77, 0.54);
+    background: rgba(146, 138, 155, 0.06);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -59,7 +64,7 @@
     position: relative;
     padding-block: 2rem;
 
-    font-family: 'Dubai', sans-serif;
+    font-family: 'Dubai', 'Roboto Slab', sans-serif;
     text-align: center;
     padding-inline: 1rem;
 }
@@ -69,9 +74,9 @@
     top: -1.3rem;
     left: 50%;
     transform: translateX(-50%);
-    background: #2A113C;
+    background: var(--bg-ltr);
     font-size: 1.5rem;
-    font-family: 'Dubai', sans-serif;
+    font-family: 'Roboto Slab', 'Dubai', sans-serif;
     white-space: nowrap;
 
 }
@@ -94,5 +99,12 @@ img {
     background: var(--green-accent);
     color: white;
     flex-wrap: wrap-reverse;
+}
+
+.btn-outlined {
+    background-color: unset;
+    color: white !important;
+    border-color: var(--green-accent);
+    border-width: 1.5px;
 }
 </style>
