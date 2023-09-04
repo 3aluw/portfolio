@@ -10,10 +10,12 @@
                             other talented developers and enthusiastic managers</div>
 
                         <div class="btn-cont flex gap-2 justify-center mt-4 flex-wrap-reverse">
-                            <v-btn class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-arrow-down">view
-                                my
-                                projects</v-btn>
-                            <v-btn append-icon="mdi:mdi-github">visit my Github</v-btn>
+                            <a href="#section-two"> <v-btn class="btn-outlined" variant="outlined"
+                                    prepend-icon="mdi:mdi-arrow-down">view
+                                    my projects</v-btn></a>
+                            <NuxtLink class="link" to="https://github.com/3aluw" target="_blank" rel="noopener">
+                                <v-btn append-icon="mdi:mdi-github">visit my Github</v-btn>
+                            </NuxtLink>
                         </div>
                     </div>
 

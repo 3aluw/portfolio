@@ -29,6 +29,10 @@ onMounted(() => { showPages.value = true })
   --green-accent-text: #00C8A1
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media(max-width: 650px) {
   html {
     font-size: 14px;

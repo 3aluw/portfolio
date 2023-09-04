@@ -12,7 +12,7 @@
     </section>
 
 
-    <section class="section-two">
+    <section class="section-two" id="section-two">
         <p class="s-header accent !text-4xl py-8"> Some projects</p>
         <SectionTwoMd class="md:hidden" v-if="md" />
         <SectionTwoLg class="hidden md:flex" v-if="!md" />
