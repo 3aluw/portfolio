@@ -109,7 +109,68 @@ improvements: [
     text: "Why not let the user save their favorite color palettes? They can always come back to them when inspiration runs dry!"
   }
 ]
-
 }
-
+const seatingPlannerSite: IProject= {
+  name: "seating plan generator",
+  description: "It can help teachers to manage their seating plans",
+  slug: "seating-planner",
+  imageName: "seating-planer.png",
+  githubLink: "https://github.com/3aluw/seating-plan",
+  demoLink: "https://seating-plan.vercel.app/",
+  techUsed: ["Figma", "nuxt", "VueUse"],
+  motivation: "Imagine the intricacies of molding a conducive learning environment via positioning students strategically to maximize focus and comprehension. This task, a cornerstone for educators, holds immense significance. As a teacher, I have experienced the power of a well-thought-out seating plan. The motivation? To transform this vital task from a laborious pen-and-paper chore into a seamless digital experience.",
+  challenges: [
+    {
+      title: "The Puzzle of Placement",
+      text: "Designing the initial seating arrangement proved demanding. Determining the optimal positions for each student within the virtual classroom was akin to solving a complex mathematical puzzle, especially since I wanted to offer three different types of plans."
+    },
+    {
+      title: "Drag-and-Swap Dilemma",
+      text: "The implementation of a drag-and-swap functionality emerged as a formidable challenge. After rigorous exploration, I adopted the VueUse UseDraggable composable. However, the road was bumpy, as issues cropped up, revealing the limitations of the chosen approach. Just to mention that the issue isn't solved yet."
+    },
+    {
+      title: "Automated Scroll",
+      text: "I wanted the page to scroll automatically as the user drags a student on the virtual classroom. I figured it out but again faced an issue with the composable I used."
+    },
+    {
+      title: "Print Precision",
+      text: "Enabling users to print seating plans proved to be more intricate than I expected. Adapting the output to various playground sizes influenced by the user data required some fine-tuning."
+    }
+  ],
+  improvements: [
+    {
+      title: "Alternative Drag-and-Swap Solution",
+      text: "Exploring alternate methods for seamless student rearrangement would be pivotal in refining the planner's functionality."
+    },
+    {
+      title: "Upgrade the Playground UI",
+      text: "The playground has a simple white background UI. It needs to be replaced by a modern one, but I haven't figured it out yet."
+    },
+    {
+      title: "Save for Future Use",
+      text: "Allowing users to save and revisit seating plans aligns with the planner's evolution. This functionality would facilitate continuity and flexibility in classroom management for teachers and schools."
+    }
+  ]
+}
+const teacherCalculatorSite: IProject= {  name: "a calculator for teachers",
+  description: "It can help teachers in daunting marks' calculation",
+  slug: "teacher-calculator",
+  imageName: "teacher-calculator.png",
+  githubLink: "https://github.com/3aluw/teachers-calculator",
+  demoLink: "https://teachers-calculator.vercel.app/",
+  techUsed: ["Figma", "nuxt", "materiald"],
+  motivation: "As an educator —a profession I deeply cherish—I encountered a formidable challenge that resonated with my colleagues. Picture this: assessing the academic progress of a class, calculating intricate point systems for each student, and striving for accuracy while avoiding the pitfalls of human error. The daunting task of manually computing scores for 20 students (each one with like 20 small sum calculations to get the final mark) was not just time-consuming; it was an ordeal. A spark ignited within me to transform this cumbersome process into a seamless experience, allowing educators to make those calculations swiftly.",
+  challenges: [
+    {
+      title: "Challenges",
+      text: "Didn't face a lot of challenges building this web app as it was simple and didn't need any third-party libraries/APIs."
+    }
+  ],
+  improvements: [
+    {
+      title: "A Mobile App",
+      text: "Visualize an evolved version of the Teacher's Calculator, available as a mobile application. This transition ensures educators have this indispensable tool at their fingertips, whether they're at school, or at home..."
+    }
+  ]}
+const cisitAlgeriaSite: IProject= {}
 export const projects:IProject[] = [eCommerceSite]
