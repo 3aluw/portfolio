@@ -1,4 +1,4 @@
-type techUsed = "TypeScript" | "nuxt" | "contentful" | "deskree" | "daisyui" | "materiald" | "Vuetify" | "VueUse" | "swiper"
+type techUsed = "TypeScript" | "nuxt" | "contentful"| "Figma" | "deskree" | "daisyui" | "materiald" | "Vuetify" | "VueUse" | "swiper"
 
 interface sectionItem {
     title:string
@@ -80,7 +80,36 @@ const leaderboardSite:IProject =
   ]
 }
 
+const colorPaletteSite: IProject= {
+name: "color generator",
+description: "it helps devs to generate color palettes for their sites",
+slug: "palette-generator",
+imageName: "color-generator.png",
+githubLink: "https://github.com/3aluw/color-palette-generator",
+demoLink: "https://color-palette-creator-hero.vercel.app/",
+techUsed: ["Figma", "nuxt"],
+motivation: "Picture this: I'm working on my first web project, 'Visit Algeria,' and bam, I hit a wall while picking a color palette. It's like choosing the right colors felt as tough as algebra! But guess what? I stumbled upon a cool API that hands out color palettes ready for websites. That got me thinking—why not help out other devs facing the same struggle? So, my motivation was to make color palette selection a piece of cake for everyone.",
+challenges: [
+  {
+    title: "The need for a template",
+    text: "I needed a place to apply these colors, so I went scouting for a free and decent HTML/CSS template. After some digging, I got one that fit the bill."
+  },
+  {
+    title: "Integrating the template with Nuxt 3",
+    text: "Integrating the chosen template with Nuxt, my trusty web framework, was trickier than I thought as the template had its own fancy third-party CSS and JS, mixed up with those CSS variables (oh, the learning opportunity!). So, I had to roll up my sleeves and deal with that."
+  }
+],
+improvements: [
+  {
+    title: "Slick New Templates",
+    text: "Giving the user not just one, but a bunch of modern, snazzy templates to try their generated color palette in. That would give the user more confidence and clarity."
+  },
+  {
+    title: "Save the user’s favorite palettes",
+    text: "Why not let the user save their favorite color palettes? They can always come back to them when inspiration runs dry!"
+  }
+]
 
-
+}
 
 export const projects:IProject[] = [eCommerceSite]
