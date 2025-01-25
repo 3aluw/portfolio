@@ -172,5 +172,46 @@ const teacherCalculatorSite: IProject= {  name: "a calculator for teachers",
       text: "Visualize an evolved version of the Teacher's Calculator, available as a mobile application. This transition ensures educators have this indispensable tool at their fingertips, whether they're at school, or at home..."
     }
   ]}
-const cisitAlgeriaSite: IProject= {}
+const visitAlgeriaSite: IProject= {
+  name: "visit Algeria",
+  description: "A website to introduce Algeria's cities for tourists",
+  slug: "visit-algeria",
+  imageName: "visit-algeria.png",
+  githubLink: "https://github.com/3aluw/visitAlgeria",
+  demoLink: "https://visit-algeria.vercel.app/",
+  techUsed: ["Figma", "contentful", "swiper"],
+  motivation: "Algeria, a vast and captivating country, is a treasure trove of natural beauty, rich history, and diverse cultures. However, the allure of this land often remains unexplored by the global tourist community. My motivation for 'Visit Algeria' stemmed from the desire to unveil the splendor of Algeria, showcasing its stunning landscapes, cities, and cultural heritage. Moreover, I recognized the lack of accessible platforms that introduce travelers to Algeria, which further fueled my determination to create an informative website.",
+  challenges: [
+    {
+      title: "Design and UI/UX",
+      text: "Crafting an intuitive and visually pleasing user interface was a significant challenge. Deciding on a color palette and arranging the content (especially cities) seamlessly required careful consideration as I revised the UI several times, as I wasn't happy even with the final design."
+    },
+    {
+      title: "Data Integration",
+      text: "I sought an Algerian news API to provide users with up-to-date information. However, sourcing a suitable API proved to be a time-consuming task due to limited suitable options available."
+    }
+  ],
+  improvements: [
+    {
+      title: "A Full Redesign",
+      text: "As I said earlier, I may have to enhance the aesthetics and user experience. Employing a refined color palette."
+    },
+    {
+      title: "Expanded Destination Coverage",
+      text: "Broadening the range of featured destinations will provide travelers with a more comprehensive view of Algeria's offerings."
+    },
+    {
+      title: "Ready-to-Use Travel Plans",
+      text: "Introducing pre-designed travel plans tailored to different preferences and durations can simplify the planning process for users."
+    },
+    {
+      title: "Cost Estimator",
+      text: "Algeria is a relatively affordable destination, but a cost estimator will empower travelers to budget effectively."
+    },
+    {
+      title: "Personalized Travel Guide Services",
+      text: "Curating personalized plans based on individual preferences will add a personal touch to the user experience."
+    }
+  ]
+}
 export const projects:IProject[] = [eCommerceSite]
