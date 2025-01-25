@@ -52,6 +52,35 @@ improvements : [
 }
 
 
+const leaderboardSite:IProject = 
+    {
+    name : 'interactive leaderboard',
+    description: "it organises any kind of game",
+    imageName: "ecom-store.png",
+    slug: "leaderboard-planner",
+    githubLink: "https://github.com/3aluw/interactive-leaderboard",
+    demoLink: "https://interactive-leaderboard.vercel.app/",
+    techUsed:["TypeScript", "Vuetify", "nuxt", "materiald"],
+    motivation: "While I was in the process of arranging a competition for my students, the task of manually tracking the progress of each individual team on paper caused an idea to spark within me: why not create an interactive digital leaderboard instead?",
+  challenges: [
+    {
+      title: "Sounds",
+      text: "The inclusion of playful sounds to enrich the interactive experience became an exciting yet time-consuming task. It was about searching for the perfect sound effects, organizing them in folders, and ensuring their timely playback after importing them in the project."
+    }
+  ],
+  improvements: [
+    {
+      title: "Round-based games",
+      text: "This enhancement could introduce a new layer of engagement, making each phase of the competition even more exhilarating."
+    },
+    {
+      title: "Flexible game Modifications",
+      text: "Empowering educators to tailor the leaderboard according to specific scenarios is a pivotal advancement. i.e., adding the ability to add or deduct bonus points under specific conditions."
+    }
+  ]
+}
+
+
 
 
 export const projects:IProject[] = [eCommerceSite]
