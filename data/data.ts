@@ -206,7 +206,7 @@ const visitAlgeriaSite: IProject= {
     },
     {
       title: "Cost Estimator",
-      text: "Algeria is a relatively affordable destination, but a cost estimator will empower travelers to budget effectively."
+      text: "Algeria is a relatively affordable destination, but a cost estimator will  empower travelers to budget effectively."
     },
     {
       title: "Personalized Travel Guide Services",
@@ -214,4 +214,4 @@ const visitAlgeriaSite: IProject= {
     }
   ]
 }
-export const projects:IProject[] = [eCommerceSite]
+export const projects:IProject[] = [eCommerceSite,visitAlgeriaSite,teacherCalculatorSite,leaderboardSite,colorPaletteSite,seatingPlannerSite,]
