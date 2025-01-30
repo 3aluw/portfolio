@@ -3,14 +3,14 @@
         <div class="project-cont relative cards-md" v-for="project in projects">
             <div class="img-cont"><img :src="`/project-pics/${project.imageName}`" alt="project semantic image"></div>
 
-            <div class="project-text   px-2 pb-2 text-white">
+            <div class="project-text  px-2 pb-2 text-white">
                 <p class="project-title py-2 ">{{ project.name }}</p>
                 <p class="project-desc ">{{ project.description }}</p>
                 <div class="btns-cont flex justify-start align-center gap-3 mx-2 mt-4">
                     <NuxtLink class="github-link" :to="project.githubLink" target="_blank" rel="noopener"> <v-icon
                             icon="mdi:mdi-github"></v-icon>
                         Code</NuxtLink>
-                    <NuxtLink :to="`project${project.slug}`"> <v-icon icon="mdi:mdi-information-slab-circle" color="white">
+                    <NuxtLink :to="`project/${project.slug}`"> <v-icon icon="mdi:mdi-information-slab-circle" color="white">
                         </v-icon> infos
                     </NuxtLink>
                 </div>

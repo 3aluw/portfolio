@@ -19,7 +19,7 @@ const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
                 <img src="~/assets/logos/deskree.png" alt="" width="20" height="20">
                 <img src="~/assets/logos/daisyui.png" alt="" width="20" height="20">
             </div>
-            <NuxtLink :to="projectObject.demo" target="_blank" rel="noopener"> <v-btn density="comfortable"
+            <NuxtLink :to="projectObject.demoLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
                     append-icon="mdi:mdi-play-outline" variant="outlined"> live
                     Demo</v-btn></NuxtLink>
         </div>
