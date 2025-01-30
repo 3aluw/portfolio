@@ -1,16 +1,16 @@
 <template>
     <div class="s-two-main flex flex-col justify-center px-1 gap-8 align-center py-4 pb-12 ">
         <div class="project-cont relative cards-md" v-for="project in projects">
-            <div class="img-cont"><img :src="`${project.image}`" alt="project semantic image"></div>
+            <div class="img-cont"><img :src="`/project-pics/${project.imageName}`" alt="project semantic image"></div>
 
             <div class="project-text   px-2 pb-2 text-white">
                 <p class="project-title py-2 ">{{ project.name }}</p>
                 <p class="project-desc ">{{ project.description }}</p>
                 <div class="btns-cont flex justify-start align-center gap-3 mx-2 mt-4">
-                    <NuxtLink class="github-link" :to="project.github" target="_blank" rel="noopener"> <v-icon
+                    <NuxtLink class="github-link" :to="project.githubLink" target="_blank" rel="noopener"> <v-icon
                             icon="mdi:mdi-github"></v-icon>
                         Code</NuxtLink>
-                    <NuxtLink :to="`project${project.url}`"> <v-icon icon="mdi:mdi-information-slab-circle" color="white">
+                    <NuxtLink :to="`project${project.slug}`"> <v-icon icon="mdi:mdi-information-slab-circle" color="white">
                         </v-icon> infos
                     </NuxtLink>
                 </div>
@@ -20,9 +20,9 @@
     </div>
 </template>
 
-<script setup>
-import projects from "~/assets/projects.json";
-let ctx;
+<script setup lang="ts">
+  import {projects} from "~/data/data"
+let ctx:any;
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';

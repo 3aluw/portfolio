@@ -56,7 +56,7 @@ const leaderboardSite:IProject =
     {
     name : 'interactive leaderboard',
     description: "it organises any kind of game",
-    imageName: "ecom-store.png",
+    imageName: "interactive-leaderboard.png",
     slug: "leaderboard-planner",
     githubLink: "https://github.com/3aluw/interactive-leaderboard",
     demoLink: "https://interactive-leaderboard.vercel.app/",
