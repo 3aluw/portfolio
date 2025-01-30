@@ -250,4 +250,4 @@ const algExpressSite: IProject= {
     },
 
   ]}
-export const projects:IProject[] = [eCommerceSite,algExpressSite,visitAlgeriaSite,teacherCalculatorSite,leaderboardSite,colorPaletteSite,seatingPlannerSite,]
+export const projects:IProject[] = [algExpressSite,teacherCalculatorSite,leaderboardSite,colorPaletteSite,eCommerceSite,seatingPlannerSite,visitAlgeriaSite]
