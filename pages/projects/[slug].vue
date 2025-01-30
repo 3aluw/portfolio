@@ -23,7 +23,7 @@ const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
                     append-icon="mdi:mdi-play-outline" variant="outlined"> live
                     Demo</v-btn></NuxtLink>
         </div>
-        <main class="main-content">
+        <main class="main-content pb-8">
             <div>
                 <h2>Motivation:</h2>
                 <p>{{ projectObject.motivation }}</p>
@@ -92,7 +92,7 @@ const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
     font-weight: 400;
     line-height: normal;
     padding-top: 2rem;
-    padding-bottom: 1rem;
+
 }
 
 .main-content h3 {
