@@ -5,10 +5,10 @@
                 <p class="project-title-lg py-2">{{ project.name }}</p>
                 <p class="project-desc ">{{ project.description }}</p>
                 <div class="btns-cont flex justify-center align-center gap-3 mx-2">
-                    <NuxtLink :to="project.github" target="_blank" rel="noopener"> <v-btn density="comfortable"
-                            class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github"> View on Github</v-btn>
+                    <NuxtLink :to="project.githubLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
+                            class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github" :disabled="!project.githubLink"> View on Github</v-btn>
                     </NuxtLink>
-                    <NuxtLink :to="`project${project.url}`"><v-btn density="comfortable" append-icon="mdi:mdi-open-in-new">
+                    <NuxtLink :to="`project/${project.slug}`"><v-btn density="comfortable" append-icon="mdi:mdi-open-in-new">
                             More
                             infos</v-btn>
                     </NuxtLink>
@@ -19,26 +19,26 @@
         <div class="right-side">
             <div class="pin"></div>
             <div class="imgs-cont">
-                <div class="img-cont-lg" v-for="project in projects"><img :src="`${project.image}`" alt=""></div>
+                <div class="img-cont-lg" v-for="project in projects"><img :src="`/project-pics/${project.imageName}`" alt=""></div>
             </div>
 
         </div>
     </div>
 </template>
 
-<script setup >
-import projects from "~/assets/projects.json";
+<script setup lang="ts">
+  import {projects} from "~/data/data"
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
-let ctx;
+let ctx:any;
 
 onMounted(() => {
 
 
     ctx = gsap.context((self) => {
-        const details = gsap.utils.toArray(".project-cont-lg:not(:first-child)")
+        const details = gsap.utils.toArray(".project-cont-lg:not(:first-child)") as HTMLBaseElement[]
         const photos = gsap.utils.toArray(".img-cont-lg:not(:first-child)")
 
 
@@ -71,8 +71,8 @@ onMounted(() => {
                 let headline = detail.querySelector(".project-title-lg")
 
                 let animation = gsap.timeline()
-                    .to(photos[index], { yPercent: 0 })
-                    .set(allPhotos[index], { autoAlpha: 0 })
+                    .to(photos[index]!, { yPercent: 0 })
+                    .set(allPhotos[index]!, { autoAlpha: 0 })
                 ScrollTrigger.create({
                     trigger: headline,
                     start: "top 80%",

@@ -1,4 +1,4 @@
-type techUsed = "TypeScript" | "nuxt" | "contentful"| "Figma" | "deskree" | "daisyui" | "materiald" | "Vuetify" | "VueUse" | "swiper"
+type techUsed = "TypeScript" | "nuxt" | "contentful"| "Figma" | "deskree" | "convex" | "daisyui" | "materiald" | "Vuetify" | "VueUse" | "swiper"
 
 interface sectionItem {
     title:string
@@ -10,7 +10,7 @@ name:string
 description:string
 slug : string
 imageName : string
-githubLink : string
+githubLink : string | undefined
 demoLink : string
 techUsed: techUsed[]
 motivation : string
@@ -21,7 +21,7 @@ improvements : sectionItem[]
 
 const eCommerceSite:IProject = 
     {
-    name : 'My ecommerce store',
+    name : 'Ecommerce Store',
     description: "An e-store that sells some interesting goods! ",
     imageName: "ecom-store.png",
     slug: "ecom-store",
@@ -54,9 +54,9 @@ improvements : [
 
 const leaderboardSite:IProject = 
     {
-    name : 'interactive leaderboard',
+    name : 'Interactive Leaderboard',
     description: "it organises any kind of game",
-    imageName: "ecom-store.png",
+    imageName: "interactive-leaderboard.png",
     slug: "leaderboard-planner",
     githubLink: "https://github.com/3aluw/interactive-leaderboard",
     demoLink: "https://interactive-leaderboard.vercel.app/",
@@ -81,7 +81,7 @@ const leaderboardSite:IProject =
 }
 
 const colorPaletteSite: IProject= {
-name: "color generator",
+name: "Color Generator",
 description: "it helps devs to generate color palettes for their sites",
 slug: "palette-generator",
 imageName: "color-generator.png",
@@ -111,7 +111,7 @@ improvements: [
 ]
 }
 const seatingPlannerSite: IProject= {
-  name: "seating plan generator",
+  name: "Seating Plan Generator",
   description: "It can help teachers to manage their seating plans",
   slug: "seating-planner",
   imageName: "seating-planer.png",
@@ -173,7 +173,7 @@ const teacherCalculatorSite: IProject= {  name: "a calculator for teachers",
     }
   ]}
 const visitAlgeriaSite: IProject= {
-  name: "visit Algeria",
+  name: "Visit Algeria",
   description: "A website to introduce Algeria's cities for tourists",
   slug: "visit-algeria",
   imageName: "visit-algeria.png",
@@ -214,4 +214,40 @@ const visitAlgeriaSite: IProject= {
     }
   ]
 }
-export const projects:IProject[] = [eCommerceSite,visitAlgeriaSite,teacherCalculatorSite,leaderboardSite,colorPaletteSite,seatingPlannerSite,]
+
+const algExpressSite: IProject= {
+  name: "AlgExpress",
+  description: "A real world service, we allow people without credit cards to buy from AliExpress",
+  slug: "algexpress",
+  imageName: "algexpress.png",
+  githubLink: undefined,
+  demoLink: "https://algixpress.vercel.app/",
+  techUsed: ["Figma", "convex", "nuxt"],
+  motivation: "Many people in my country dream of shopping from AliExpress, drawn by its vast selection and competitive prices. However, a major obstacle stands in their way: the lack of a credit card for online payments. Seeing this challenge, I was motivated to create a solution that allows buyers to shop freely, paying in local currency without the hassle of international transactions. My goal is to bridge this gap, making global e-commerce more accessible and convenient.",
+  challenges: [
+    {
+      title: "Simplifying steps",
+      text: "Balancing the need for essential user information with a seamless experience was challenging. To streamline the process, I condensed it into four short steps—some focusing on personal details and others on product specifics—ensuring both efficiency and user convenience."
+    },
+    {
+      title: "Product Card",
+      text: " To fetch essential product details affordably, I relied on OpenGraph tags. Initially, I used Node modules with a Nuxt server API, but they were unreliable in production. To ensure consistency, I switched to new APIs, improving data retrieval and stability."
+    }
+    ,
+    {
+      title: "Orders Tracking",
+      text: " To provide customers with real-time order updates at no extra cost, I integrated a free tracking widget. This solution ensures transparency and enhances the shopping experience without adding complexity or expenses"
+    }
+  ],
+  improvements: [
+    {
+      title: "My Orders Page",
+      text: "I need to enhance the user experience by allowing customers to view all their orders on a single page. This upgrade provides better order management, making it easier to track purchases at a glance."
+    },
+    {
+      title: "today deals",
+      text: "I can add a feature to display discounts directly on the landing page, ensuring users can quickly spot deals and promotions. This enhances engagement and encourages more purchases."
+    },
+
+  ]}
+export const projects:IProject[] = [algExpressSite,teacherCalculatorSite,leaderboardSite,colorPaletteSite,eCommerceSite,seatingPlannerSite,visitAlgeriaSite]
