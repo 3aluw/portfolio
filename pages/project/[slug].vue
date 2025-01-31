@@ -10,8 +10,8 @@ const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
   <template>
     
     <div class="cont">
-        <h1 class="text-center title"> {{ projectObject.name }} </h1>
-        <div class="tech-used flex justify-center items-center gap-4 mt-8">
+        <h1 class="text-center title py-8"> {{ projectObject.name }} </h1>
+        <div class="tech-used flex justify-center items-center gap-4 ">
             <div class="tech flex gap-2"> Highlights of the tech used :
                 <img src="~/assets/logos/TypeScript.svg" alt="" width="20" height="20">
                 <img src="~/assets/logos/nuxt.svg" alt="" width="20" height="20">

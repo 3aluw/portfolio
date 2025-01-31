@@ -21,7 +21,7 @@ improvements : sectionItem[]
 
 const eCommerceSite:IProject = 
     {
-    name : 'My ecommerce store',
+    name : 'Ecommerce Store',
     description: "An e-store that sells some interesting goods! ",
     imageName: "ecom-store.png",
     slug: "ecom-store",
@@ -54,7 +54,7 @@ improvements : [
 
 const leaderboardSite:IProject = 
     {
-    name : 'interactive leaderboard',
+    name : 'Interactive Leaderboard',
     description: "it organises any kind of game",
     imageName: "interactive-leaderboard.png",
     slug: "leaderboard-planner",
@@ -81,7 +81,7 @@ const leaderboardSite:IProject =
 }
 
 const colorPaletteSite: IProject= {
-name: "color generator",
+name: "Color Generator",
 description: "it helps devs to generate color palettes for their sites",
 slug: "palette-generator",
 imageName: "color-generator.png",
@@ -111,7 +111,7 @@ improvements: [
 ]
 }
 const seatingPlannerSite: IProject= {
-  name: "seating plan generator",
+  name: "Seating Plan Generator",
   description: "It can help teachers to manage their seating plans",
   slug: "seating-planner",
   imageName: "seating-planer.png",
@@ -173,7 +173,7 @@ const teacherCalculatorSite: IProject= {  name: "a calculator for teachers",
     }
   ]}
 const visitAlgeriaSite: IProject= {
-  name: "visit Algeria",
+  name: "Visit Algeria",
   description: "A website to introduce Algeria's cities for tourists",
   slug: "visit-algeria",
   imageName: "visit-algeria.png",
