@@ -20,7 +20,7 @@ const props = defineProps({
 </script>
 <style scoped>
 .logo {
-    width: 1rem
+    width: 1.5rem
 }
 
 .upper-icons>*,

@@ -1,11 +1,6 @@
 <template>
     <section class="section-one">
         <LogoIcons position="up" />
-        <div class="text-center align-center mx-2 mb-8 mt-4">
-            <p class="s-header inline-block">Coding with <span class="accent-text">curiosity</span>,</p>
-            <p class="s-header inline-block pl-2"> Learning with <span class="accent-text">purpose</span>.</p>
-        </div>
-
         <SectionOneMd class="md:hidden" v-if="md" />
         <SectionOneLg class="hidden md:block" v-if="!md" />
         <LogoIcons position="bottom" />
