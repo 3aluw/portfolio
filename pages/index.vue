@@ -8,19 +8,16 @@
 
 
     <section class="section-two" id="section-two">
-        <p class="s-header accent !text-4xl py-8"> Some projects</p>
+        <p class="s-header accent !text-6xl py-8"> SOME PROJECTS</p>
         <SectionTwoMd class="md:hidden" v-if="md" />
         <SectionTwoLg class="hidden md:flex" v-if="!md" />
     </section>
 
     <section class="section-three">
-        <p class="s-header accent !text-4xl py-8">About me</p>
+
         <!--  <SectionThreeMd class="md:hidden" v-if="md" />-->
         <SectionThreeLg />
     </section>
-    <footer>
-        <Footer />
-    </footer>
 </template>
 <script setup lang="ts">
 
@@ -54,10 +51,7 @@ section {
 .s-header {
     text-align: center;
     color: white;
-    font-family: 'Courier Prime';
-    font-size: 1.75rem;
     font-style: normal;
-    font-weight: 700;
 }
 
 .section-two {

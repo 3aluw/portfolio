@@ -1,14 +1,43 @@
 <template>
     <div class="my-8">
-        <div class="s-three-main mx-8 flex justify-between  ">
-            <div class="flex flex-col justify-around text-cont gap-4 py-4 md:py-0 md:gap-0">
-                <div class="sentence-cont flex " v-for="(sentence, index) in sentences">
-                    <img :src="icons[index]" class="w-4 icon">
+        <div class="s-three-main mx-8 flex justify-between items-center gap-8 px-12">
+            <div class="pic-cont">
+                <img src="~/assets/about-me-face.png" alt="my face">
+            </div>
+            <div class="text-cont w-10/12 flex flex-col justify-around gap-2 text-white">
+                <h1 class="text-6xl">ABOUT ME</h1>
+                <h2 class="text-2xl accent-text ">Abdellah Hoauche | Vue developer</h2>
+                <p class="leading-relaxed pt-4"> I'm a web developer with a strong preference for working on<strong> Nuxt/Vue projects</strong>. I'm
+                    always looking to
+                    contribute to <strong>open-source projects</strong>, learn new things, and collaborate with like-minded developers. <br>
 
-                    <p> {{ sentence }} </p>
+                    I've had hands-on experience with <strong>BAAS platforms</strong> like Firebase and Deskree, and I'm currently open
+                    to job opportunities or internships where I can grow and make an impact.<br>
+
+                    I'm also very curious about the <strong>Web3</strong> space and excited about its potential. When I'm not coding,
+                    you'll probably find me watching or playing football, or trying (and usually failing) to get my
+                    super lazy cat to do anything productive 😺.<br>
+
+                    <strong class="text-lg">Let’s build something cool together!</strong> </p>
+                <div class="links pt-4 flex gap-16">
+                    <NuxtLink to="https://www.linkedin.com/in/abdellah-houache-479256185/" class="link" target="_blank"
+                        rel="noopener">
+                        <div>
+                            <img src="~/assets/logos/linkedin.svg" alt="">
+                        </div>
+                    </NuxtLink>
+                    <NuxtLink class="link" to="mailto:2000abdallah2014@gmail.com" target="_blank" rel="noopener">
+                        <div><img src="~/assets/logos/mail.svg" alt=""></div>
+                    </NuxtLink>
+                    <NuxtLink class="link" to="https://twitter.com/3aluwa" target="_blank" rel="noopener">
+                        <div><img src="~/assets/logos/twitter.svg" alt=""></div>
+                    </NuxtLink>
+                    <NuxtLink class="link" to="https://www.reddit.com/user/3aluw" target="_blank" rel="noopener">
+                        <div><img src="~/assets/logos/reddit.svg" alt=""></div>
+                    </NuxtLink>
+
                 </div>
             </div>
-            <div class="pic-cont hidden md:block"><img src="~/assets/developer.png" alt=""></div>
 
         </div>
     </div>
@@ -16,54 +45,8 @@
 
 
 <script setup lang="ts">
-import sentences from "~/assets/aboutMe.json"
-import eye from "~/assets/icons/eye.svg"
-import heart from "~/assets/icons/heart.svg"
-import backend from "~/assets/icons/backend.svg"
-import search from "~/assets/icons/search.svg"
-import web from "~/assets/icons/web-3.svg"
-import cat from "~/assets/icons/cat.svg"
-import ball from "~/assets/icons/ball.svg"
 
 
-const icons = [eye, heart,
-    backend,
-    search,
-    web,
-    cat,
-    ball
-]
-
-
-const writtenSentences: Ref<string[]> = ref([]);
-
-
-
-
-import gsap from 'gsap';
-let ctx: any;
-
-onMounted(() => {
-    ctx = gsap.context((self) => {
-        gsap.from(".icon", {
-            xPercent: -200,
-            duration: 0.3,
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: ".sentence-cont",
-
-                start: "bottom 50%",
-
-
-            }
-        })
-
-    }); // <- Scope!
-});
-
-onUnmounted(() => {
-    ctx.revert(); // <- Easy Cleanup!
-});
 
 </script>
 
@@ -75,13 +58,6 @@ onUnmounted(() => {
     margin: 0 auto;
 
 
-}
-
-.text-cont {
-    background: linear-gradient(180deg, rgba(33, 7, 52, 0.46) 0%, rgba(33, 7, 52, 0.40) 100%);
-    box-shadow: -5px 5px 4px 0px rgba(255, 255, 255, 0.25);
-    padding-inline: 1rem;
-    overflow: hidden;
 }
 
 
@@ -100,12 +76,8 @@ onUnmounted(() => {
     min-width: 1rem;
 }
 
-.pic-cont {
-    width: min(31rem, 40%);
-    transform: translateY(-2rem);
-}
-
-.pic-cont img {
-    width: 100%;
+.link img{
+      width: 40px;
+    height: 40px
 }
 </style>
