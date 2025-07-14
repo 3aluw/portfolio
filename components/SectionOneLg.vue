@@ -4,7 +4,7 @@
             <div class="infos-cont">
                 <div class="background-cont">
                     <div class="text-cont">
-                        <div class="title text-4xl sm:text-2xl">Hi, I'm <span class="accent">ABDELLAH</span> </div>
+                        <div class="title sm:text-4xl">Hi, I'm <span class="accent">ABDELLAH</span> </div>
                         <div class="text-2xl text-left">Aspiring web developer eager to seize the opportunity to learn, grow, and collaborate closely
                             with
                             other talented developers and enthusiastic managers.</div>
@@ -57,7 +57,6 @@
 }
 
 .text-cont {
-    max-width: 70%;
     color: white;
     position: relative;
     padding-block: 2rem;
@@ -66,7 +65,7 @@
     justify-content: space-evenly;
     font-family: 'Dubai', 'Roboto Slab', sans-serif;
     text-align: center;
-    padding-inline: 1rem;
+    padding-inline: 3rem;
 }
 
 .text-cont>.title {
