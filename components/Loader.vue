@@ -33,7 +33,7 @@ p {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    animation: load 1s ease-in-out infinite alternate;
+    animation: load 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes load {
