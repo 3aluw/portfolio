@@ -1,12 +1,13 @@
 <template>
     <div class="my-8">
-        <div class="s-three-main mx-8 flex justify-between items-center gap-8 px-12">
-            <div class="pic-cont">
+        <div class="s-three-main sm:mx-8 flex flex-col sm:flex-row justify-between items-center gap-8 px-4 sm:px-12 ">
+           
+            <div class="pic-cont w-full sm:w-auto">
                 <img src="~/assets/about-me-face.png" alt="my face">
             </div>
             <div class="text-cont w-10/12 flex flex-col justify-around gap-2 text-white">
-                <h1 class="text-6xl">ABOUT ME</h1>
-                <h2 class="text-2xl accent-text ">Abdellah Hoauche | Vue developer</h2>
+                <h1 class="hidden sm:block sm:text-6xl">ABOUT ME</h1>
+                <h2 class="text-xl sm:text-2xl accent-text ">Abdellah Hoauche | Vue developer</h2>
                 <p class="leading-relaxed pt-4"> I'm a web developer with a strong preference for working on<strong> Nuxt/Vue projects</strong>. I'm
                     always looking to
                     contribute to <strong>open-source projects</strong>, learn new things, and collaborate with like-minded developers. <br>
@@ -18,22 +19,22 @@
                     you'll probably find me watching or playing football, or trying (and usually failing) to get my
                     super lazy cat to do anything productive 😺.<br>
 
-                    <strong class="text-lg">Let’s build something cool together!</strong> </p>
-                <div class="links pt-4 flex gap-16">
+                    <strong class="text-lg text-accent">Let’s build something cool together!</strong> </p>
+                <div class="links pt-4 flex gap-16 items-center">
                     <NuxtLink to="https://www.linkedin.com/in/abdellah-houache-479256185/" class="link" target="_blank"
                         rel="noopener">
                         <div>
-                            <img src="~/assets/logos/linkedin.svg" alt="">
+                            <img class="w-14" src="~/assets/logos/linkedin.svg" alt="">
                         </div>
                     </NuxtLink>
                     <NuxtLink class="link" to="mailto:2000abdallah2014@gmail.com" target="_blank" rel="noopener">
-                        <div><img src="~/assets/logos/mail.svg" alt=""></div>
+                        <div><img class="w-10" src="~/assets/logos/mail.svg" alt=""></div>
                     </NuxtLink>
                     <NuxtLink class="link" to="https://twitter.com/3aluwa" target="_blank" rel="noopener">
-                        <div><img src="~/assets/logos/twitter.svg" alt=""></div>
+                        <div><img class="w-10" src="~/assets/logos/twitter.svg" alt=""></div>
                     </NuxtLink>
                     <NuxtLink class="link" to="https://www.reddit.com/user/3aluw" target="_blank" rel="noopener">
-                        <div><img src="~/assets/logos/reddit.svg" alt=""></div>
+                        <div><img class="w-10" src="~/assets/logos/reddit.svg" alt=""></div>
                     </NuxtLink>
 
                 </div>
@@ -76,8 +77,5 @@
     min-width: 1rem;
 }
 
-.link img{
-      width: 40px;
-    height: 40px
-}
+
 </style>

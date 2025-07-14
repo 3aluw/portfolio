@@ -8,14 +8,13 @@
 
 
     <section class="section-two" id="section-two">
-        <p class="s-header accent !text-6xl py-8"> SOME PROJECTS</p>
+        <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
         <SectionTwoMd class="md:hidden" v-if="md" />
         <SectionTwoLg class="hidden md:flex" v-if="!md" />
     </section>
 
     <section class="section-three">
-
-        <!--  <SectionThreeMd class="md:hidden" v-if="md" />-->
+        <h1 class=" sm:hidden s-header accent text-3xl sm:!text-6xl py-8">ABOUT ME</h1>
         <SectionThreeLg />
     </section>
 </template>
