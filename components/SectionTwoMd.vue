@@ -121,7 +121,7 @@ onUnmounted(() => {
 }
 
 .project-text {
-    background: #7662B1;
+    background: #7662b14f;
     bottom: 0;
     width: 100%;
 }

@@ -15,7 +15,7 @@
 
     <section class="section-three">
         <h1 class=" sm:hidden s-header accent text-3xl sm:!text-6xl py-8">ABOUT ME</h1>
-        <SectionThreeLg />
+        <SectionThree />
     </section>
 </template>
 <script setup lang="ts">
