@@ -1,6 +1,6 @@
 <template>
-    <div class="my-8">
-        <div
+    <div class="my-8" >
+        <div   
             class="s-three-main sm:!mx-8 flex flex-col sm:flex-row justify-between items-center gap-8 !px-4 sm:!px-20 ">
 
             <div class="pic-cont">
@@ -28,14 +28,14 @@
                     <strong class="text-lg text-accent">Let’s build something cool together!</strong>
                 </p>
                 <div class="links pt-4 flex gap-16 items-center">
-                    <NuxtLink to="https://www.linkedin.com/in/abdellah-houache-479256185/" class="link" target="_blank"
+                    <NuxtLink  to="https://www.linkedin.com/in/abdellah-houache-479256185/" class="link" target="_blank"
                         rel="noopener">
                         <div>
                             <img class="w-14" src="~/assets/logos/linkedin.svg" alt="">
                         </div>
                     </NuxtLink>
                     <NuxtLink class="link" to="mailto:2000abdallah2014@gmail.com" target="_blank" rel="noopener">
-                        <div><img class="w-10" src="~/assets/logos/mail.svg" alt=""></div>
+                        <div><img  class="w-10 logo" src="~/assets/logos/mail.svg" alt=""></div>
                     </NuxtLink>
                     <NuxtLink class="link" to="https://twitter.com/3aluwa" target="_blank" rel="noopener">
                         <div><img class="w-10" src="~/assets/logos/twitter.svg" alt=""></div>
@@ -54,8 +54,21 @@
 
 <script setup lang="ts">
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-
+onMounted(()=>{
+    gsap.from('.link',{
+    x : '100vw',
+    duration:2.5,
+    stagger: {
+        amount:1,
+        from: "center",
+        ease:"expo.out"
+    },
+    scrollTrigger: ".link",
+})
+})
 </script>
 
 <style scoped>

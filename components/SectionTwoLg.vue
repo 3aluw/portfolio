@@ -36,7 +36,6 @@ let ctx:any;
 
 onMounted(() => {
 
-
     ctx = gsap.context((self) => {
         const details = gsap.utils.toArray(".project-cont-lg:not(:first-child)") as HTMLBaseElement[]
         const photos = gsap.utils.toArray(".img-cont-lg:not(:first-child)")
@@ -52,19 +51,13 @@ onMounted(() => {
 
         // add a media query. When it matches, the associated function will run
         mm.add("(min-width: 768px)", () => {
-
-            // this setup code only runs when viewport is at least 600px wide
-
-
+            // this setup code only runs when viewport is at least 768px wide
             ScrollTrigger.create({
                 trigger: ".s-two-main-lg",
                 start: "top top",
                 end: "bottom bottom",
                 pin: ".right-side"
             })
-
-
-
 
             details.forEach((detail, index) => {
 
@@ -82,8 +75,6 @@ onMounted(() => {
                     markers: false
                 })
             })
-
-
 
             return () => {
                 ctx.revert();
