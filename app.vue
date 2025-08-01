@@ -31,6 +31,7 @@ onMounted(() => { showPages.value = true })
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg-ltr);
 }
 
 @media(max-width: 650px) {

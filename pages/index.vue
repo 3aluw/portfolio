@@ -1,4 +1,5 @@
 <template>
+    <div class="portfolio-cont">
     <section class="section-one">
         <LogoIcons position="up" />
         <SectionOneMd class="md:hidden" v-if="md" />
@@ -17,6 +18,7 @@
         <h1 class=" sm:hidden s-header accent text-3xl sm:!text-6xl py-8">ABOUT ME</h1>
         <SectionThree />
     </section>
+    </div>
 </template>
 <script setup lang="ts">
 
@@ -33,7 +35,10 @@ onMounted(() => {
 </script>
 <style >
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
-
+.portfolio-cont{
+    max-width: 1500px;
+    margin-inline: auto;
+}
 .accent-text {
     color: var(--green-accent-text) !important
 }
