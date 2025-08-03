@@ -5,6 +5,7 @@
 
             <div class="pic-cont">
                 <img src="~/assets/about-me-face.png" alt="my face">
+                <div class="circle-border"></div>
             </div>
             <div class="text-cont w-10/12 flex flex-col justify-around gap-2 text-white">
                 <h1 class="hidden sm:block sm:text-6xl">ABOUT ME</h1>
@@ -61,13 +62,21 @@ onMounted(()=>{
     gsap.from('.link',{
     x : '100vw',
     duration:2.5,
+    markers: true,
     stagger: {
         amount:1,
         from: "center",
-        ease:"expo.out"
+        ease:"elastic.out"
     },
     scrollTrigger: ".link",
+    
 })
+
+let tl = gsap.timeline({
+    scrollTrigger:".s-three-main"
+});
+tl.to(".circle-border", {duration: 2, rotate: -45,ease:"power2.in"})
+.to(".circle-border", {duration: 5, rotate: 360,ease:"power1.out"})
 })
 </script>
 
@@ -81,8 +90,30 @@ onMounted(()=>{
 
 }
 
+.pic-cont {
+    position: relative; /* so ::after is positioned relative to this container */
+    clip-path: circle(50% at 50% 50%);
+    background: #2B2146 
+    
+}
+
 .pic-cont img {
     max-height: 24rem;
+    position: relative;
+    padding: 4px;
+}
+
+.pic-cont .circle-border {
+    position: absolute;
+    top: 50%;  
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: calc(100% - 5px);
+    aspect-ratio: 1/1;
+    border: 5px var(--green-accent);
+    border-style:  dashed double none;
+    border-radius: 50%;
+    box-sizing: content-box;
 }
 
 .sentence-cont p {
