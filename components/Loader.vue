@@ -1,6 +1,6 @@
 <template>
     <div class="loader-cont">
-        <p>"Patience is not simply the ability to wait, it's how we behave while we're waiting." <br> Joyce Meyer</p>
+        <p>"Patience is not simply the ability to wait, it's how we behave while we're waiting." <br> <span class="block mt-2">Joyce Meyer</span></p>
         <div id="loader"></div>
     </div>
 </template>
