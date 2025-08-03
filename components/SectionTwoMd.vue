@@ -37,8 +37,8 @@ onMounted(() => {
         mm.add("(max-width: 768px)", () => {
             ScrollTrigger.batch(".project-cont", {
                 once: true,
-                start: "top center",
-                onEnter: batch => gsap.to(batch, { xPercent: 150 }),
+                start: "-50% bottom",
+                onEnter: batch => gsap.to(batch, { xPercent: 150}),
 
             })
 
