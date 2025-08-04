@@ -10,7 +10,8 @@
                     <NuxtLink class="github-link" :to="project.githubLink" target="_blank" rel="noopener"> <v-icon
                             icon="mdi:mdi-github"></v-icon>
                         Code</NuxtLink>
-                    <NuxtLink :to="`project/${project.slug}`"> <v-icon icon="mdi:mdi-information-slab-circle" color="white">
+                    <NuxtLink :to="`project/${project.slug}`"> <v-icon icon="mdi:mdi-information-slab-circle"
+                            color="white">
                         </v-icon> infos
                     </NuxtLink>
                 </div>
@@ -21,8 +22,8 @@
 </template>
 
 <script setup lang="ts">
-  import {projects} from "~/data/data"
-let ctx:any;
+import { projects } from "~/data/data"
+let ctx: any;
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -37,8 +38,8 @@ onMounted(() => {
         mm.add("(max-width: 768px)", () => {
             ScrollTrigger.batch(".project-cont", {
                 once: true,
-                start: "-50% bottom",
-                onEnter: batch => gsap.to(batch, { xPercent: 150}),
+                start: "top center",
+                onEnter: batch => gsap.to(batch, { xPercent: 150 }),
 
             })
 
