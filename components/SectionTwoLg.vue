@@ -36,13 +36,12 @@ let ctx:any;
 
 onMounted(() => {
 
-
     ctx = gsap.context((self) => {
         const details = gsap.utils.toArray(".project-cont-lg:not(:first-child)") as HTMLBaseElement[]
         const photos = gsap.utils.toArray(".img-cont-lg:not(:first-child)")
 
 
-        gsap.set(photos, { yPercent: 101 })
+        gsap.set(photos, { yPercent: 100 })
 
         const allPhotos = gsap.utils.toArray(".img-cont-lg")
 
@@ -52,19 +51,13 @@ onMounted(() => {
 
         // add a media query. When it matches, the associated function will run
         mm.add("(min-width: 768px)", () => {
-
-            // this setup code only runs when viewport is at least 600px wide
-
-
+            // this setup code only runs when viewport is at least 768px wide
             ScrollTrigger.create({
                 trigger: ".s-two-main-lg",
                 start: "top top",
                 end: "bottom bottom",
                 pin: ".right-side"
             })
-
-
-
 
             details.forEach((detail, index) => {
 
@@ -82,8 +75,6 @@ onMounted(() => {
                     markers: false
                 })
             })
-
-
 
             return () => {
                 ctx.revert();
@@ -106,18 +97,17 @@ onMounted(() => {
     min-height: 100vh;
     overflow: hidden;
     max-width: 1400px;
+    margin-inline: 1rem ;
 }
 
 .project-cont-lg {
-
     margin-bottom: 12rem;
     color: white;
     border-radius: 5px;
-
+    width: clamp(300px, 30vw, 500px);
 }
 
 .project-title-lg {
-    color: #CBE3EC;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Open Sans';
     font-size: 2rem;

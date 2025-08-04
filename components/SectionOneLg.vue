@@ -1,16 +1,16 @@
 <template>
     <div>
-        <div class="s-one-main flex justify-between gap-20 mt-20">
+        <div class="s-one-main flex justify-evenly gap-20 mt-20">
             <div class="infos-cont">
                 <div class="background-cont">
                     <div class="text-cont">
-                        <div class="title">Hi I'm <span class="accent">ABDELLAH</span> </div>
-                        <div>Aspiring web developer eager to seize the opportunity to learn, grow, and collaborate closely
+                        <div class="title sm:text-4xl">Hi, I'm <span class="accent">ABDELLAH</span> </div>
+                        <div class="text-2xl text-left">Aspiring web developer eager to seize the opportunity to learn, grow, and collaborate closely
                             with
-                            other talented developers and enthusiastic managers</div>
+                            other talented developers and enthusiastic managers.</div>
 
                         <div class="btn-cont flex gap-2 justify-center mt-4 flex-wrap-reverse">
-                            <a href="#section-two"> <v-btn class="btn-outlined" variant="outlined"
+                            <a href="#section-two"> <v-btn class="btn-outlined border-dashed" variant="outlined"
                                     prepend-icon="mdi:mdi-arrow-down">view
                                     my projects</v-btn></a>
                             <NuxtLink class="link" to="https://github.com/3aluw" target="_blank" rel="noopener">
@@ -23,7 +23,7 @@
 
             </div>
             <div class="pic-cont">
-                <img src="~/assets/face.png" alt="">
+                <img src="~/assets/face.png" alt="my personal picture">
             </div>
 
         </div>
@@ -40,7 +40,7 @@
 
 .s-one-main {
     background: unset;
-    max-height: 20rem;
+    max-height: 22.5rem;
     margin-bottom: 2rem;
 }
 
@@ -50,32 +50,30 @@
 
 .background-cont {
     background: rgba(146, 138, 155, 0.06);
-    display: flex;
+    gap: 1rem;
+    height: calc(100% - 2rem);
+        display: flex;
     justify-content: center;
-    align-items: flex-start;
-    height: calc(100% - 1.5rem)
 }
 
 .text-cont {
-    transform: translateY(-1rem);
-    max-width: 70%;
     color: white;
-    border: 1px solid #DBE7ED;
     position: relative;
     padding-block: 2rem;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     font-family: 'Dubai', 'Roboto Slab', sans-serif;
     text-align: center;
-    padding-inline: 1rem;
+    padding-inline: 3rem;
 }
 
 .text-cont>.title {
     position: absolute;
-    top: -1.3rem;
+    top: -2rem;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--bg-ltr);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-family: 'Roboto Slab', 'Dubai', sans-serif;
     white-space: nowrap;
 
@@ -83,7 +81,7 @@
 
 .pic-cont {
     transform: translateY(-1.5rem);
-    width: clamp(200px, 26rem, 40%);
+    width: clamp(200px, 26rem, 50%);
 }
 
 img {

@@ -1,16 +1,48 @@
 <template>
     <div class="upper-icons flex justify-around w-full h-12 items-end" v-if="props.position === 'up'">
-        <img src="~/assets/logos/nuxt.svg" class="logo " />
-        <img src="~/assets/logos/Vue.svg" class="logo" />
-        <img src="~/assets/logos/TypeScript.svg" class="logo" />
-        <img src="~/assets/logos/TailwindCSS.svg" class="logo" />
+        <div class="logo-container">
+            <img src="~/assets/logos/nuxt.svg" alt="Nuxt" class="glitch-logo" />
+            <img src="~/assets/logos/nuxt.svg" alt="" class="glitch-logo glitch-logo--glitch" />
+        </div>
+
+        <div class="logo-container">
+            <img src="~/assets/logos/Vue.svg" alt="Vue" class="glitch-logo" />
+            <img src="~/assets/logos/Vue.svg" alt="" class="glitch-logo glitch-logo--glitch" />
+        </div>
+
+        <div class="logo-container">
+            <img src="~/assets/logos/TypeScript.svg" alt="TypeScript" class="glitch-logo" />
+            <img src="~/assets/logos/TypeScript.svg" alt="" class="glitch-logo glitch-logo--glitch" />
+        </div>
+
+        <div class="logo-container">
+            <img src="~/assets/logos/TailwindCSS.svg" alt="TailwindCSS" class="glitch-logo" />
+            <img src="~/assets/logos/TailwindCSS.svg" alt="" class="glitch-logo glitch-logo--glitch" />
+        </div>
+
     </div>
 
     <div class="bottom-icons flex justify-around w-full h-12 items-end" v-if="props.position === 'bottom'">
-        <img src="~/assets/logos/Vuetify.svg" class="logo" />
-        <img src="~/assets/logos/VueUse.svg" class="logo" />
-        <img src="~/assets/logos/Figma.svg" class="logo" />
-        <img src="~/assets/logos/Javascript.svg" class="logo" />
+        <div class="logo-container">
+            <img src="~/assets/logos/Vuetify.svg" alt="Vuetify" class="glitch-logo" />
+            <img src="~/assets/logos/Vuetify.svg" alt="" class="glitch-logo glitch-logo--glitch" />
+        </div>
+
+        <div class="logo-container">
+            <img src="~/assets/logos/VueUse.svg" alt="VueUse" class="glitch-logo" />
+            <img src="~/assets/logos/VueUse.svg" alt="" class="glitch-logo glitch-logo--glitch" />
+        </div>
+
+        <div class="logo-container">
+            <img src="~/assets/logos/Figma.svg" alt="Figma" class="glitch-logo" />
+            <img src="~/assets/logos/Figma.svg" alt="" class="glitch-logo glitch-logo--glitch" />
+        </div>
+
+        <div class="logo-container">
+            <img src="~/assets/logos/Javascript.svg" alt="JavaScript" class="glitch-logo" />
+            <img src="~/assets/logos/Javascript.svg" alt="" class="glitch-logo glitch-logo--glitch" />
+        </div>
+
     </div>
 </template>
 <script setup lang="ts">
@@ -19,39 +51,63 @@ const props = defineProps({
 })
 </script>
 <style scoped>
-.logo {
-    width: 1rem
+.logo-container {
+    width: 1.6rem;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
 }
 
-.upper-icons>*,
-.bottom-icons>* {
-    animation: float 15s ease-in-out alternate infinite;
+
+.glitch-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    
 }
 
-@keyframes float {
-
-    50% {
-        transform: translateY(-150%);
-    }
-
-    100% {
-        transform: translateY(0%);
-    }
+.glitch-logo--glitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    opacity: 0.7;
+    animation: glitch-move 10s infinite ;
+    filter: hue-rotate(45deg);
+    pointer-events: none;
+    filter: grayscale(1);
 }
 
-.logo:nth-child(1) {
-    animation-delay: 4s;
+@keyframes glitch-move {
+  0% { transform: translate(0, 0);  }
+  3% { transform: translate(-2px, 2px); }
+  6% { transform: translate(2px, -2px); }
+  9% { transform: translate(1px, 1px); }
+  12% { transform: translate(-1px, -1px); }
+  15% { transform: translate(0, 0); }
+  18% { transform: translate(2px, 2px); }
+  21% { transform: translate(-2px, -1px); }
+  24% { transform: translate(1px, -2px); }
+  27% { transform: translate(-1px, 1px); }
+  30% { transform: translate(0, 0);  filter: grayscale(0); }
+
+  /* Pause from 30% to 100% (7 seconds of nothing) */
+  100% { transform: translate(0, 0); }
 }
 
-.logo:nth-child(2) {
-    animation-delay: 3s;
+.logo-container:nth-child(1) .glitch-logo--glitch {
+    animation-delay: 1s;
 }
 
-.logo:nth-child(3) {
+.logo-container:nth-child(2) .glitch-logo--glitch {
     animation-delay: 2s;
 }
 
-.logo:nth-child(4) {
-    animation-delay: 0s;
+.logo-container:nth-child(3) .glitch-logo--glitch {
+    animation-delay: 3s;
+}
+
+.logo-container:nth-child(4) .glitch-logo--glitch {
+    animation-delay: 4s;
 }
 </style>

@@ -22,7 +22,7 @@ improvements : sectionItem[]
 const eCommerceSite:IProject = 
     {
     name : 'Ecommerce Store',
-    description: "An e-store that sells some interesting goods! ",
+    description: "An e-store that sells some interesting goods!",
     imageName: "ecom-store.png",
     slug: "ecom-store",
     githubLink: "https://github.com/3aluw/Store",
