@@ -14,9 +14,13 @@
                 <p class="project-title-lg pb-2">{{ project.name }}</p>
                 <p class="project-desc ">{{ project.description }}</p>
                 <div class="btns-cont flex justify-left gap-3 mx-2 mt-20">
-                    <NuxtLink :to="project.githubLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
+                    <NuxtLink v-if="project.githubLink" :to="project.githubLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
                             class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github"
-                            :disabled="!project.githubLink"> View on Github</v-btn>
+                            >  on Github</v-btn>
+                    </NuxtLink>
+                    <NuxtLink v-else :to="project.demoLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
+                            class="btn-outlined" variant="outlined" append-icon="mdi:mdi-play"
+                            > Live demo</v-btn>
                     </NuxtLink>
                     <NuxtLink :to="`project/${project.slug}`"><v-btn density="comfortable"
                             append-icon="mdi:mdi-open-in-new">
