@@ -156,7 +156,7 @@ onMounted(() => {
 }
 
 .v-btn {
-    background: var(--green-accent);
+    background: var(--red-accent);
     color: white;
 }
 
@@ -166,6 +166,6 @@ onMounted(() => {
 }
 
 .btn-outlined .v-btn__prepend i {
-    color: var(--green-accent);
+    color: var(--red-accent);
 }
 </style>

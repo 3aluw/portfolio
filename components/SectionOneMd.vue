@@ -4,7 +4,7 @@
             <div class="infos-cont">
                 <div class="background-cont">
                     <div class="text-cont">
-                        <div class="title sm:text-4xl">Hi, I'm <span class="accent">ABDELLAH</span> </div>
+                        <div class="title sm:text-4xl">Hi, I'm <span class="yellow-accent">ABDELLAH</span> </div>
                         <div class="text-2xl text-left">Aspiring web developer eager to seize the opportunity to learn, grow, and collaborate closely
                             with
                             other talented developers and enthusiastic managers.</div>
@@ -34,8 +34,8 @@
 @import url('https://fonts.cdnfonts.com/css/dubai');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
-.accent {
-    color: var(--green-accent);
+.yellow-accent {
+    color: var(--yellow-accent);
 }
 
 .s-one-main {
@@ -94,7 +94,7 @@ img {
     font-style: normal;
     font-weight: 600;
     text-transform: lowercase;
-    background: var(--green-accent);
+    background: var(--red-accent);
     color: white;
     flex-wrap: wrap-reverse;
 }
@@ -102,7 +102,7 @@ img {
 .btn-outlined {
     background-color: unset;
     color: white !important;
-    border-color: var(--green-accent);
+    border-color: var(--red-accent);
     border-width: 1.5px;
 }
 </style>

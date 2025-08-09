@@ -40,7 +40,7 @@ p {
     0% {
         transform: translateX(-100px);
         offset: 10px 0px;
-        background: var(--bg-ltr);
+        background: var(--bg-rtl);
     }
 
     100% {

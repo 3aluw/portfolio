@@ -65,7 +65,7 @@ const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
 }
 
 .title {
-    color: var(--green-accent);
+    color: var(--red-accent);
     font-family: 'Inter';
     font-size: 2rem;
     font-style: normal;

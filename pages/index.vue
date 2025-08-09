@@ -40,7 +40,7 @@ onMounted(() => {
     margin-inline: auto;
 }
 .accent-text {
-    color: var(--green-accent-text) !important
+    color: var(--yellow-accent) !important
 }
 
 section {
@@ -56,6 +56,7 @@ section {
     text-align: center;
     color: white;
     font-style: normal;
+    padding-block: 2rem;
 }
 
 .section-two {
