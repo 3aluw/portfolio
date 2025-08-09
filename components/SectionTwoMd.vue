@@ -13,7 +13,7 @@
             <div class="project-cont-lg" v-for="project in projects">
                 <p class="project-title-lg pb-2">{{ project.name }}</p>
                 <p class="project-desc ">{{ project.description }}</p>
-                <div class="btns-cont flex justify-left gap-3 mx-2 mt-20">
+                <div class="btns-cont flex justify-left gap-3 mx-2 mt-12 ">
                     <NuxtLink v-if="project.githubLink" :to="project.githubLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
                             class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github"
                             >  on Github</v-btn>
@@ -60,7 +60,6 @@ onMounted(() => {
                 start: "top 10%",
                 end: "bottom 90%",
                 pin: ".left-side",
-                markers: true
             })
 
             details.forEach((detail, index) => {
