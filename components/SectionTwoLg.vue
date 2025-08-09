@@ -1,38 +1,42 @@
 <template>
-    <div class="s-two-main-lg flex justify-around px-4 py-4 pb-12 gap-4">
-        <div class="left-side  flex flex-col ">
+    <div class="s-two-main-lg flex justify-center px-4  pb-12 gap-20">
+
+        <div class="left-side">
+            <div class="pin"></div>
+            <div class="imgs-cont">
+                <div class="img-cont-lg" v-for="project in projects"><img :src="`/project-pics/${project.imageName}`"
+                        alt=""></div>
+            </div>
+        </div>
+
+        <div class="right-side  flex flex-col ">
             <div class="project-cont-lg" v-for="project in projects">
-                <p class="project-title-lg py-2">{{ project.name }}</p>
+                <p class="project-title-lg pb-2">{{ project.name }}</p>
                 <p class="project-desc ">{{ project.description }}</p>
-                <div class="btns-cont flex justify-center align-center gap-3 mx-2">
+                <div class="btns-cont flex justify-left gap-3 mx-2 mt-20">
                     <NuxtLink :to="project.githubLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
-                            class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github" :disabled="!project.githubLink"> View on Github</v-btn>
+                            class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github"
+                            :disabled="!project.githubLink"> View on Github</v-btn>
                     </NuxtLink>
-                    <NuxtLink :to="`project/${project.slug}`"><v-btn density="comfortable" append-icon="mdi:mdi-open-in-new">
+                    <NuxtLink :to="`project/${project.slug}`"><v-btn density="comfortable"
+                            append-icon="mdi:mdi-open-in-new">
                             More
-                            infos</v-btn>
+                            info</v-btn>
                     </NuxtLink>
                 </div>
             </div>
         </div>
 
-        <div class="right-side">
-            <div class="pin"></div>
-            <div class="imgs-cont">
-                <div class="img-cont-lg" v-for="project in projects"><img :src="`/project-pics/${project.imageName}`" alt=""></div>
-            </div>
-
-        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-  import {projects} from "~/data/data"
+import { projects } from "~/data/data"
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
-let ctx:any;
+let ctx: any;
 
 onMounted(() => {
 
@@ -54,9 +58,10 @@ onMounted(() => {
             // this setup code only runs when viewport is at least 768px wide
             ScrollTrigger.create({
                 trigger: ".s-two-main-lg",
-                start: "top top",
+                start: "top 10%",
                 end: "bottom bottom",
-                pin: ".right-side"
+                pin: ".left-side",
+                markers: true
             })
 
             details.forEach((detail, index) => {
@@ -68,11 +73,11 @@ onMounted(() => {
                     .set(allPhotos[index]!, { autoAlpha: 0 })
                 ScrollTrigger.create({
                     trigger: headline,
-                    start: "top 80%",
-                    end: "top 10%",
+                    start: "top 70%",
+                    end: "top 0%",
                     animation: animation,
                     scrub: true,
-                    markers: false
+                    
                 })
             })
 
@@ -97,23 +102,21 @@ onMounted(() => {
     min-height: 100vh;
     overflow: hidden;
     max-width: 1400px;
-    margin-inline: 1rem ;
+    margin-inline: 1rem;
 }
 
 .project-cont-lg {
-    margin-bottom: 12rem;
     color: white;
     border-radius: 5px;
-    width: clamp(300px, 30vw, 500px);
+    width: clamp(250px, 35vw, 700px);
+    aspect-ratio: 1 / 1;
 }
 
 .project-title-lg {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: 'Open Sans';
     font-size: 2rem;
-
     font-weight: 700;
-
 }
 
 .project-desc {
@@ -125,11 +128,8 @@ onMounted(() => {
     font-weight: 700;
 }
 
-.btns-cont {
-    margin-top: 30vh;
-}
 
-.right-side {
+.left-side {
     max-width: 40vw
 }
 
@@ -164,7 +164,7 @@ onMounted(() => {
 
 .btn-outlined {
     background: unset;
-    border-color: var(--green-accent);
+    border-style: dashed;
 }
 
 .btn-outlined .v-btn__prepend i {
