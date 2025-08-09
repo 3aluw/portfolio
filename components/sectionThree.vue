@@ -1,7 +1,6 @@
 <template>
-    <div class="my-8">
-        <div
-            class="s-three-main sm:!mx-8 flex flex-col sm:flex-row justify-between items-center gap-8 !px-4 sm:!px-20 ">
+    <div>
+        <div class="s-three-main sm:!mx-8 flex flex-col sm:flex-row justify-between gap-8 !px-4 sm:!px-20 ">
 
             <div class="pic-cont">
                 <img src="~/assets/about-me-face.png" alt="my face">
@@ -9,9 +8,10 @@
             </div>
             <div class="text-cont w-10/12 flex flex-col justify-around gap-2 text-white">
                 <h1 class="hidden sm:block sm:text-6xl">ABOUT ME</h1>
-                <h2 class="text-xl sm:text-2xl accent-text self-center sm:self-auto">Abdellah Hoauche | Vue developer
+                <h2 class="text-xl sm:text-2xl accent-text self-center sm:self-auto mt-2">Abdellah Hoauche | Vue developer
                 </h2>
-                <p class="leading-relaxed pt-2 sm:pt-4"> I'm a web developer with a strong preference for working on<strong>
+                <p class="leading-relaxed"> I'm a web developer with a strong preference for working
+                    on<strong>
                         Nuxt/Vue projects</strong>. I'm
                     always looking to
                     contribute to <strong>open-source projects</strong>, learn new things, and collaborate with
@@ -21,9 +21,10 @@
                     currently open
                     to job opportunities or internships where I can grow and make an impact.<br>
 
-                    I'm also very curious about the <strong>Web3</strong> space and excited about its potential. 
-                   <span class="hidden sm:inline"> WhenI'm not coding, you'll probably find me watching or playing football, or trying (and usually failing) to get my
-                    super lazy cat to do anything productive 😺.</span>
+                    I'm also very curious about the <strong>Web3</strong> space and excited about its potential.
+                    <span class="hidden sm:inline"> WhenI'm not coding, you'll probably find me watching or playing
+                        football, or trying (and usually failing) to get my
+                        super lazy cat to do anything productive 😺.</span>
                     <br>
                     <strong class="text-lg text-accent pt-2">Let’s build something cool together!</strong>
                 </p>
@@ -81,7 +82,8 @@ onMounted(() => {
     max-width: min(1200px, 100vw);
     margin: 0 auto;
     overflow: hidden;
-
+    min-height: calc(100vh - 4rem);
+    align-items: center;
 }
 
 .pic-cont {
