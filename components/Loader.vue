@@ -18,7 +18,7 @@
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    background: var(--bg-ltr);
+    background: var(--main-bg);
 }
 
 p {
@@ -40,7 +40,7 @@ p {
     0% {
         transform: translateX(-100px);
         offset: 10px 0px;
-        background: var(--bg-rtl);
+        background: var(--projects-bg);
     }
 
     100% {

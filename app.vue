@@ -22,15 +22,15 @@ onMounted(() => { showPages.value = true })
 </script>
 <style>
 :root {
-  --bg-ltr: linear-gradient(-135deg, #3A2E5D 0%, #2E2348 100%);
-  --bg-rtl: #4B3C6D;
+  --main-bg: linear-gradient(-135deg, #3A2E5D 0%, #2E2348 100%);
+  --projects-bg: #4B3C6D;
   --red-accent:  #FF6B6B ;
   --yellow-accent: #F9F871;
 }
 
 html {
   scroll-behavior: smooth;
-  background: var(--bg-ltr);
+  background: var(--projects-bg);
 }
 
 @media(max-width: 650px) {
@@ -49,5 +49,15 @@ html {
 .v-leave-to {
   opacity: 0;
 
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0.3;
+  filter: blur(0.5rem);
 }
 </style>
