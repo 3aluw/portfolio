@@ -49,7 +49,7 @@ section {
 
 /*section One */
 .section-one {
-    background: var(--bg-ltr);
+    background: var(--main-bg);
 }
 
 .s-header {
@@ -60,10 +60,10 @@ section {
 }
 
 .section-two {
-    background: var(--bg-rtl);
+    background: var(--projects-bg);
 }
 
 .section-three {
-    background: var(--bg-ltr);
+    background: var(--main-bg);
 }
 </style>
