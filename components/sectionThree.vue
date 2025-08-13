@@ -56,6 +56,7 @@
 <script setup lang="ts">
 
 import gsap from 'gsap';
+import { onMounted } from 'vue';
 
 onMounted(() => {
     let tl = gsap.timeline({

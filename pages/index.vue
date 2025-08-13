@@ -1,18 +1,18 @@
 <template>
     <div class="portfolio-cont">
-        <section class="section-one">
-            <LogoIcons position="up" />
-            <SectionOneSm class="md:hidden" v-if="md" />
-            <SectionOneMd class="hidden md:block" v-if="!md" />
-            <LogoIcons position="bottom" />
-        </section>
+    <section class="section-one">
+        <LogoIcons position="up" />
+        <SectionOneMd class="md:hidden" v-if="md" />
+        <SectionOneLg class="hidden md:block" v-if="!md" />
+        <LogoIcons position="bottom" />
+    </section>
 
 
-        <section class="section-two" id="section-two">
-            <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
-            <SectionTwoSm v-if="md" />
-            <SectionTwoMd class="flex" v-if="!md" />
-        </section>
+    <section class="section-two" id="section-two">
+        <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
+        <SectionTwoMd class="md:hidden" v-if="md" />
+        <SectionTwoLg class="hidden md:flex" v-if="!md" />
+    </section>
 
         <section class="section-three">
             <h1 class=" sm:hidden s-header accent text-3xl sm:!text-6xl py-8">ABOUT ME</h1>
@@ -22,12 +22,12 @@
 </template>
 <script setup lang="ts">
 
-
-const md = ref()
+const md = ref(true)
 onMounted(() => {
     const matchMd = window?.matchMedia('(max-width: 768px)')
-    md.value = matchMd.matches
-    matchMd.addEventListener('change', (e) => { md.value = e.matches })
+    matchMd.matches ? md.value = true : md.value = false
+
+    matchMd.addEventListener('change', (e) => { e.matches ? md.value = true : md.value = false; })
 })
 
 
