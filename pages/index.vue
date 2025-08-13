@@ -42,7 +42,7 @@ onMounted(() => {
 }
 
 .accent-text {
-    color: var(--yellow-accent) !important
+    color: var(--green-accent) !important
 }
 
 section {

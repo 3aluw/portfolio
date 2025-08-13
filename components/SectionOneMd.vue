@@ -33,7 +33,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
 .yellow-accent {
-    color: var(--yellow-accent);
+    color: var(--green-accent);
 }
 
 .s-one-main {

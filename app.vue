@@ -25,7 +25,7 @@ onMounted(() => { showPages.value = true })
   --main-bg: linear-gradient(-135deg, #3A2E5D 0%, #2E2348 100%);  
   --projects-bg: #4B3C6D;
   --blue-accent: #4FC3F7; /* bright blue accent */
-  --yellow-accent: #F9F871;
+  --green-accent: #61d099;
   color: white;
 }
 
