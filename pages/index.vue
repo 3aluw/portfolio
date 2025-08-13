@@ -3,7 +3,7 @@
     <section class="section-one">
         <LogoIcons position="up" />
         <SectionOneSM  v-if="md" />
-        <SectionOneMD  v-if="!md" />
+        <SectionOneMD  v-else />
         <LogoIcons position="bottom" />
     </section>
 
@@ -11,7 +11,7 @@
     <section class="section-two" id="section-two">
         <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
         <SectionTwoSM v-if="md" />
-        <SectionTwoMD class="flex" v-if="!md"/>
+        <SectionTwoMD class="flex" v-else/>
     </section>
 
     <section class="section-three">
@@ -23,7 +23,7 @@
 <script setup lang="ts">
 
 
-const md = ref(true)
+const md = ref()
 onMounted(() => {
     const matchMd = window?.matchMedia('(max-width: 768px)')
      md.value = matchMd.matches
