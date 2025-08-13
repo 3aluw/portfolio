@@ -2,16 +2,16 @@
     <div class="portfolio-cont">
     <section class="section-one">
         <LogoIcons position="up" />
-        <SectionOneMd class="md:hidden" v-if="md" />
-        <SectionOneLg class="hidden md:block" v-if="!md" />
+        <SectionOneSM  v-if="md" />
+        <SectionOneMD  v-else />
         <LogoIcons position="bottom" />
     </section>
 
 
     <section class="section-two" id="section-two">
         <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
-        <SectionTwoMd class="md:hidden" v-if="md" />
-        <SectionTwoLg class="hidden md:flex" v-if="!md" />
+        <SectionTwoSM v-if="md" />
+        <SectionTwoMD class="flex" v-else/>
     </section>
 
     <section class="section-three">
@@ -22,12 +22,12 @@
 </template>
 <script setup lang="ts">
 
+
 const md = ref(true)
 onMounted(() => {
     const matchMd = window?.matchMedia('(max-width: 768px)')
-    matchMd.matches ? md.value = true : md.value = false
-
-    matchMd.addEventListener('change', (e) => { e.matches ? md.value = true : md.value = false; })
+     md.value = matchMd.matches
+    matchMd.addEventListener('change', (e) => {  md.value = e.matches })
 })
 
 
@@ -40,7 +40,7 @@ onMounted(() => {
     margin-inline: auto;
 }
 .accent-text {
-    color: var(--green-accent-text) !important
+    color: var(--yellow-accent) !important
 }
 
 section {
@@ -49,20 +49,21 @@ section {
 
 /*section One */
 .section-one {
-    background: var(--bg-ltr);
+    background: var(--main-bg);
 }
 
 .s-header {
     text-align: center;
     color: white;
     font-style: normal;
+    margin-block: 2rem;
 }
 
 .section-two {
-    background: var(--bg-rtl);
+    background: var(--projects-bg);
 }
 
 .section-three {
-    background: var(--bg-ltr);
+    background: var(--main-bg);
 }
 </style>

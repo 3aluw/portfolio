@@ -1,17 +1,9 @@
-  <script setup>
-  import {projects} from "~/data/data"
-  
-  const route = useRoute()
-  console.log(route.params) // { id: '123' }
-  const urlSlug =  route.params.slug
-const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
 
-  </script>
-  <template>
-    
+<template>
+
     <div class="cont">
         <h1 class="text-center title py-8"> {{ projectObject.name }} </h1>
-        <div class="tech-used flex justify-center items-center gap-4 ">
+        <div class="tech-used flex justify-between items-center pr-6 ">
             <div class="tech flex gap-2"> Highlights of the tech used :
                 <img src="~/assets/logos/TypeScript.svg" alt="" width="20" height="20">
                 <img src="~/assets/logos/nuxt.svg" alt="" width="20" height="20">
@@ -51,9 +43,13 @@ const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
         </main>
     </div>
 </template>
+<script setup>
+import { projects } from "~/data/data"
+const route = useRoute()
+const urlSlug = route.params.slug
+const projectObject = computed(() => projects.find(obj => obj.slug === urlSlug))
 
-
-
+</script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Inter:wght@700&display=swap');
 
@@ -61,11 +57,12 @@ const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
     max-width: 850px;
     padding-inline: 1rem;
     margin: 0 auto;
-    background: #F5F4F4;
+    background-color: #FAFAFA;
+    color: #2B2B2B;
 }
 
 .title {
-    color: var(--green-accent);
+    color: #3A2E5D;
     font-family: 'Inter';
     font-size: 2rem;
     font-style: normal;
@@ -85,7 +82,7 @@ const projectObject = computed(()=>projects.find(obj=> obj.slug === urlSlug))
 }
 
 .main-content h2 {
-    color: #000;
+    color: #3A2E5D;
     font-family: 'Inknut Antiqua';
     font-size: 1.875rem;
     font-style: normal;
