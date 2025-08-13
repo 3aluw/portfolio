@@ -31,7 +31,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 onMounted(() => {
     ctx = gsap.context((self) => {
 
-
         let mm = gsap.matchMedia();
 
         // add a media query. When it matches, the associated function will run

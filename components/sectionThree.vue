@@ -8,7 +8,7 @@
             </div>
             <div class="text-cont w-10/12 flex flex-col justify-around gap-2 ">
                 <h1 class="hidden sm:block sm:text-6xl">ABOUT ME</h1>
-                <h2 class="text-xl sm:text-2xl accent-text self-center sm:self-auto mt-2">Abdellah Hoauche | Vue developer
+                <h2 class="text-xl sm:text-2xl accent-text self-center sm:self-auto mt-2 opacity-80">Abdellah Hoauche | Vue developer
                 </h2>
                 <p class="leading-relaxed"> I'm a web developer with a strong preference for working
                     on<strong>
@@ -56,6 +56,7 @@
 <script setup lang="ts">
 
 import gsap from 'gsap';
+import { onMounted } from 'vue';
 
 onMounted(() => {
     let tl = gsap.timeline({

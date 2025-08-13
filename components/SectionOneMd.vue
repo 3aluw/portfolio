@@ -5,13 +5,13 @@
                 <div class="background-cont">
                     <div class="text-cont">
                         <div class="title md:text-2xl lg:text-4xl">Hi, I'm <span class="yellow-accent">ABDELLAH</span>, </div>
-                        <div class="md:text-xl lg:text-2xl text-left">"A passionate web developer driven to learn, create, and deliver impactful digital experiences through collaboration and innovation.</div>
+                        <div class="md:text-xl lg:text-2xl text-left">A passionate web developer driven to learn, create, and deliver impactful digital experiences through collaboration and innovation.</div>
 
                         <div class="btn-cont flex gap-2 justify-center mt-4 flex-wrap-reverse">
                             <a href="#section-two"> <v-btn class="btn-outlined border-dashed" variant="outlined"
                                     prepend-icon="mdi:mdi-arrow-down">view
                                     my projects</v-btn></a>
-                            <NuxtLink class="link" to="https://github.com/3aluw" target="_blank" rel="noopener">
+                            <NuxtLink to="https://github.com/3aluw" target="_blank" rel="noopener">
                                 <v-btn append-icon="mdi:mdi-github">visit my Github</v-btn>
                             </NuxtLink>
                         </div>
@@ -33,7 +33,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
 .yellow-accent {
-    color: var(--yellow-accent);
+    color: var(--green-accent);
 }
 
 .s-one-main {
