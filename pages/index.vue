@@ -3,7 +3,7 @@
     <section class="section-one">
         <LogoIcons position="up" />
         <SectionOneSm  v-if="md" />
-        <SectionOneLg v-if="!md" />
+        <SectionOneMd v-if="!md" />
         <LogoIcons position="bottom" />
     </section>
 
@@ -11,7 +11,7 @@
     <section class="section-two" id="section-two">
         <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
         <SectionTwoSm  v-if="md" />
-        <SectionTwoLg  v-if="!md" />
+        <SectionTwoMd  v-if="!md" />
     </section>
 
         <section class="section-three">
