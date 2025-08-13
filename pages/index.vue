@@ -2,16 +2,16 @@
     <div class="portfolio-cont">
     <section class="section-one">
         <LogoIcons position="up" />
-        <SectionOneMd class="md:hidden" v-if="md" />
-        <SectionOneLg class="hidden md:block" v-if="!md" />
+        <SectionOneMd  v-if="md" />
+        <SectionOneLg v-if="!md" />
         <LogoIcons position="bottom" />
     </section>
 
 
     <section class="section-two" id="section-two">
         <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
-        <SectionTwoMd class="md:hidden" v-if="md" />
-        <SectionTwoLg class="hidden md:flex" v-if="!md" />
+        <SectionTwoMd  v-if="md" />
+        <SectionTwoLg  v-if="!md" />
     </section>
 
         <section class="section-three">
