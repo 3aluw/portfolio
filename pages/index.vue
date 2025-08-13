@@ -2,8 +2,10 @@
     <div class="portfolio-cont">
         <section class="section-one">
             <LogoIcons position="up" />
-                <SectionOneSM  />
-                <SectionOneMD />
+            <client-only>
+                <SectionOneSM v-if="md" />
+                <SectionOneMD v-else />
+            </client-only>
             <LogoIcons position="bottom" />
         </section>
 
