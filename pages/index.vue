@@ -25,10 +25,10 @@
 const md = ref(true)
 onMounted(() => {
     const matchMd = window?.matchMedia('(max-width: 768px)')
-    matchMd.matches ? md.value = true : md.value = false
-
-    matchMd.addEventListener('change', (e) => { e.matches ? md.value = true : md.value = false; })
+     md.value = matchMd.matches
+    matchMd.addEventListener('change', (e) => {  md.value = e.matches })
 })
+
 
 
 
