@@ -1,44 +1,46 @@
 <template>
     <div class="portfolio-cont">
-    <section class="section-one">
-        <LogoIcons position="up" />
-        <SectionOneSM  v-if="md" />
-        <SectionOneMD  v-else />
-        <LogoIcons position="bottom" />
-    </section>
+        <section class="section-one">
+            <LogoIcons position="up" />
+            <SectionOneSM v-if="md === true" />
+            <SectionOneMD v-else-if="md === false" />
+            <LogoIcons position="bottom" />
+        </section>
 
 
-    <section class="section-two" id="section-two">
-        <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
-        <SectionTwoSM v-if="md" />
-        <SectionTwoMD class="flex" v-else/>
-    </section>
+        <section class="section-two" id="section-two">
+            <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
+            <SectionTwoSM v-if="md" />
+            <SectionTwoMD class="flex" v-else />
+        </section>
 
-    <section class="section-three">
-        <h1 class=" sm:hidden s-header accent text-3xl sm:!text-6xl py-8">ABOUT ME</h1>
-        <SectionThree />
-    </section>
+        <section class="section-three">
+            <h1 class=" sm:hidden s-header accent text-3xl sm:!text-6xl py-8">ABOUT ME</h1>
+            <SectionThree />
+        </section>
     </div>
 </template>
 <script setup lang="ts">
 
 
-const md = ref()
+const md = ref<boolean|null>(null)
 onMounted(() => {
     const matchMd = window?.matchMedia('(max-width: 768px)')
-     md.value = matchMd.matches
-    matchMd.addEventListener('change', (e) => {  md.value = e.matches })
+    md.value = matchMd.matches
+    matchMd.addEventListener('change', (e) => { md.value = e.matches })
 })
 
 
 
 </script>
-<style >
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
-.portfolio-cont{
+
+.portfolio-cont {
     max-width: 1500px;
     margin-inline: auto;
 }
+
 .accent-text {
     color: var(--yellow-accent) !important
 }
