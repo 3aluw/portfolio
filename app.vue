@@ -17,14 +17,20 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const showPages = ref(false)
-onMounted(() => { showPages.value = true })
+onMounted(async () => {
+  await nextTick() // Wait for DOM update
+  requestAnimationFrame(() => {
+    showPages.value = true
+  })
+})
 
 </script>
 <style>
 :root {
-  --main-bg: linear-gradient(-135deg, #3A2E5D 0%, #2E2348 100%);  
+  --main-bg: linear-gradient(-135deg, #3A2E5D 0%, #2E2348 100%);
   --projects-bg: #4B3C6D;
-  --blue-accent: #4FC3F7; /* bright blue accent */
+  --blue-accent: #4FC3F7;
+  /* bright blue accent */
   --green-accent: #61d099;
   color: white;
 }
@@ -56,6 +62,7 @@ html {
 .page-leave-active {
   transition: all 0.2s;
 }
+
 .page-enter-from,
 .page-leave-to {
   opacity: 0.3;
