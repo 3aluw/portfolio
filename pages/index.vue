@@ -2,8 +2,8 @@
     <div class="portfolio-cont">
         <section class="section-one">
             <LogoIcons position="up" />
-            <SectionOneSM v-if="md === true" />
-            <SectionOneMD v-else-if="md === false" />
+                <SectionOneSM  />
+                <SectionOneMD />
             <LogoIcons position="bottom" />
         </section>
 
@@ -23,7 +23,7 @@
 <script setup lang="ts">
 
 
-const md = ref<boolean|null>(null)
+const md = ref()
 onMounted(() => {
     const matchMd = window?.matchMedia('(max-width: 768px)')
     md.value = matchMd.matches
