@@ -1,7 +1,6 @@
 <template>
     <div class="s-one-main">
         <div class="messages-cont">
-
             <div class="my-message-cont py-4">
                 <div class="personal-infos flex justify-between ">
                     <v-avatar>
