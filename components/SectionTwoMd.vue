@@ -12,7 +12,7 @@
         <div class="right-side  flex flex-col ">
             <div class="project-cont-lg" v-for="project in projects">
                 <p class="project-title-lg md:text-2xl lg:text-4xl">{{ project.name }}</p>
-                <p class="project-desc sm:text-base lg:text-xl">{{ project.description }}</p>
+                <p class="project-desc md:text-base lg:text-xl">{{ project.description }}</p>
                 <div class="btns-cont flex justify-left gap-3 mx-2 mt-12 ">
                     <NuxtLink v-if="project.githubLink" :to="project.githubLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
                             class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github"
@@ -154,7 +154,7 @@ onMounted(() => {
 }
 
 .v-btn {
-    background: var(--red-accent);
+    background: var(--blue-accent);
     color: white;
 }
 
@@ -164,6 +164,6 @@ onMounted(() => {
 }
 
 .btn-outlined .v-btn__prepend i {
-    color: var(--red-accent);
+    color: var(--blue-accent);
 }
 </style>

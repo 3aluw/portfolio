@@ -22,10 +22,11 @@ onMounted(() => { showPages.value = true })
 </script>
 <style>
 :root {
-  --main-bg: linear-gradient(-135deg, #3A2E5D 0%, #2E2348 100%);
+  --main-bg: linear-gradient(-135deg, #3A2E5D 0%, #2E2348 100%);  
   --projects-bg: #4B3C6D;
-  --red-accent:  #FF6B6B ;
+  --blue-accent: #4FC3F7; /* bright blue accent */
   --yellow-accent: #F9F871;
+  color: white;
 }
 
 html {

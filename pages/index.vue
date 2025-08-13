@@ -56,7 +56,7 @@ section {
     text-align: center;
     color: white;
     font-style: normal;
-    padding-block: 2rem;
+    margin-block: 2rem;
 }
 
 .section-two {

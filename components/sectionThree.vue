@@ -6,7 +6,7 @@
                 <img src="~/assets/about-me-face.png" alt="my face">
                 <div class="circle-border"></div>
             </div>
-            <div class="text-cont w-10/12 flex flex-col justify-around gap-2 text-white">
+            <div class="text-cont w-10/12 flex flex-col justify-around gap-2 ">
                 <h1 class="hidden sm:block sm:text-6xl">ABOUT ME</h1>
                 <h2 class="text-xl sm:text-2xl accent-text self-center sm:self-auto mt-2">Abdellah Hoauche | Vue developer
                 </h2>
@@ -90,7 +90,7 @@ onMounted(() => {
     position: relative;
     /* so ::after is positioned relative to this container */
     clip-path: circle(50% at 50% 50%);
-    background: #4C3A72
+    background: var(--projects-bg)
 }
 
 .pic-cont img {
@@ -114,7 +114,6 @@ onMounted(() => {
 
 .sentence-cont p {
     align-self: flex-end;
-    color: white;
     font-family: 'Fira Mono';
     font-size: 0.8rem;
     font-style: normal;
