@@ -4,10 +4,8 @@
             <div class="infos-cont">
                 <div class="background-cont">
                     <div class="text-cont">
-                        <div class="title sm:text-4xl">Hi, I'm <span class="yellow-accent">ABDELLAH</span> </div>
-                        <div class="text-2xl text-left">Aspiring web developer eager to seize the opportunity to learn, grow, and collaborate closely
-                            with
-                            other talented developers and enthusiastic managers.</div>
+                        <div class="title md:text-2xl lg:text-4xl">Hi, I'm <span class="yellow-accent">ABDELLAH</span>, </div>
+                        <div class="md:text-xl lg:text-2xl text-left">"A passionate web developer driven to learn, create, and deliver impactful digital experiences through collaboration and innovation.</div>
 
                         <div class="btn-cont flex gap-2 justify-center mt-4 flex-wrap-reverse">
                             <a href="#section-two"> <v-btn class="btn-outlined border-dashed" variant="outlined"
@@ -57,7 +55,7 @@
 }
 
 .text-cont {
-    color: white;
+
     position: relative;
     padding-block: 2rem;
     display: flex;
@@ -94,7 +92,7 @@ img {
     font-style: normal;
     font-weight: 600;
     text-transform: lowercase;
-    background: var(--red-accent);
+    background: var(--blue-accent);
     color: white;
     flex-wrap: wrap-reverse;
 }
@@ -102,7 +100,7 @@ img {
 .btn-outlined {
     background-color: unset;
     color: white !important;
-    border-color: var(--red-accent);
+    border-color: var(--blue-accent);
     border-width: 1.5px;
 }
 </style>

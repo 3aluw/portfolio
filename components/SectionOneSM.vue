@@ -10,10 +10,7 @@
                     <p class="name">Abdellah</p>
                 </div>
                 <p class="message-body ml-12">
-                    Hi, <span> I'm Abdellah.</span> An aspiring web developer eager to seize the opportunity to learn,
-                    grow,
-                    and
-                    collaborate closely with other talented developers and enthusiastic clients/managers.
+                    Hi, <span> I'm Abdellah.</span>A passionate web developer driven to learn, create, and deliver impactful digital experiences through collaboration and innovation.
                 </p>
             </div>
             <Transition>
