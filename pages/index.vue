@@ -2,7 +2,7 @@
     <div class="portfolio-cont">
     <section class="section-one">
         <LogoIcons position="up" />
-        <SectionOneMd  v-if="md" />
+        <SectionOneSm  v-if="md" />
         <SectionOneLg v-if="!md" />
         <LogoIcons position="bottom" />
     </section>
@@ -10,7 +10,7 @@
 
     <section class="section-two" id="section-two">
         <p class="s-header accent text-3xl sm:!text-6xl py-8"> SOME PROJECTS</p>
-        <SectionTwoMd  v-if="md" />
+        <SectionTwoSm  v-if="md" />
         <SectionTwoLg  v-if="!md" />
     </section>
 
