@@ -11,14 +11,22 @@
                 <img src="~/assets/logos/deskree.png" alt="" width="20" height="20">
                 <img src="~/assets/logos/daisyui.png" alt="" width="20" height="20">
             </div>
-            <NuxtLink :to="projectObject.demoLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
+            <NuxtLink v-if="projectObject.demoLink" :to="projectObject.demoLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
                     append-icon="mdi:mdi-play-outline" variant="outlined"> live
                     Demo</v-btn></NuxtLink>
+            <NuxtLink v-else :to="projectObject.demoLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
+                    prepend-icon="mdi:mdi-github" variant="outlined"> view on Github</v-btn></NuxtLink>
         </div>
         <main class="main-content pb-8">
             <div>
                 <h2>Motivation:</h2>
                 <p>{{ projectObject.motivation }}</p>
+            </div>
+            <div>
+                <h2>main features:</h2>
+                <v-list bg-color="#FAFAFA" >
+                    <v-list-item  v-for="feature in projectObject.features" ><v-icon icon="mdi:mdi-plus"></v-icon> {{ feature }}</v-list-item>
+                </v-list>
             </div>
             <div>
                 <h2>Challenges</h2>
