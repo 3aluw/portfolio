@@ -6,7 +6,7 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
 
 .loader-cont {
     width: 100vw;
@@ -23,7 +23,7 @@
 
 p {
     text-align: center;
-    font-family: 'Libre Baskerville', serif;
+    font-family: serif;
     font-size: 2rem;
     color: white;
     padding-inline: 1rem;
