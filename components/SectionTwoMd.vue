@@ -4,8 +4,14 @@
         <div class="left-side">
             <div class="pin"></div>
             <div class="imgs-cont">
-                <div class="img-cont-lg" v-for="project in projects"><img :src="`/project-pics/${project.imageName}`"
-                        alt=""></div>
+                <div class="img-cont-lg" v-for="project in projects"><img
+                 :src="`/project-pics/${project.imageName}`"
+                 :srcset="`/project-pics/${project.imageName} 600w,
+                 /large-project-pics/${project.imageName} 1024w`"
+                 sizes="35vw"
+                 loading="lazy"
+                 decoding="async"
+                        :alt="project.name + 'picture'"></div>
             </div>
         </div>
 
@@ -132,11 +138,11 @@ onMounted(() => {
 .imgs-cont {
     overflow: hidden;
     position: relative;
-    width: clamp(250px, 35vw, 700px);
+    width: min(35vw, 500px);
     aspect-ratio: 1 / 1;
     border-radius: 25px;
     box-shadow: white 2px 2px 4px 0px;
-
+    margin: 0 auto;
 }
 
 .img-cont-lg {
