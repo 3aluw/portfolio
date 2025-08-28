@@ -17,6 +17,12 @@ export default defineNuxtConfig({
       'process.env.DEBUG': false,
     },
   }, app: {
+    head: {
+      title: 'abdellah - portfolio', // default fallback title
+      htmlAttrs: {
+        lang: 'en',
+      }
+    },
     pageTransition: { name: 'page', mode: 'out-in' }
   }
 })

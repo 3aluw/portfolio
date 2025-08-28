@@ -5,16 +5,26 @@
     </Transition>
 
     <NuxtPage v-if="showPages" />
-
-
-
   </div>
 </template>
+
 <script setup lang="ts">
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+if (import.meta.server) {
+  // These meta tags will only be added during server-side rendering
+  useSeoMeta({
+    title: 'portfolio - Abdellah',
+    ogTitle: 'portfolio - Abdellah',
+    robots: 'index, follow',
+    description: 'my web development portfolio',
+    ogDescription: 'my web development portfolio',
+    ogImage: '~/assets/face.png',
+  })
+}
 
 const showPages = ref(false)
 onMounted(async () => {
