@@ -8,7 +8,8 @@
             </div>
             <div class="text-cont w-10/12 flex flex-col justify-around gap-2 ">
                 <h1 class="hidden sm:block sm:text-6xl">ABOUT ME</h1>
-                <h2 class="text-xl sm:text-2xl accent-text self-center sm:self-auto mt-2 opacity-80">Abdellah Hoauche | Vue developer
+                <h2 class="text-xl sm:text-2xl accent-text self-center sm:self-auto mt-2 opacity-80">Abdellah Hoauche |
+                    Vue developer
                 </h2>
                 <p class="leading-relaxed"> I'm a web developer with a strong preference for working
                     on<strong>
@@ -30,18 +31,21 @@
                 </p>
                 <div class="links pt-2 sm:pt-4 flex gap-16 items-center">
                     <NuxtLink to="https://www.linkedin.com/in/abdellah-houache-479256185/" class="link" target="_blank"
-                        rel="noopener">
+                        rel="noopener" aria-label="LinkedIn Profile">
                         <div>
                             <img class="w-14" src="~/assets/logos/linkedin.svg" alt="">
                         </div>
                     </NuxtLink>
-                    <NuxtLink class="link" to="mailto:2000abdallah2014@gmail.com" target="_blank" rel="noopener">
+                    <NuxtLink class="link" to="mailto:2000abdallah2014@gmail.com" target="_blank" rel="noopener"
+                        aria-label="Send Email">
                         <div><img class="w-10 logo" src="~/assets/logos/mail.svg" alt=""></div>
                     </NuxtLink>
-                    <NuxtLink class="link" to="https://twitter.com/3aluwa" target="_blank" rel="noopener">
+                    <NuxtLink class="link" to="https://twitter.com/3aluwa" target="_blank" rel="noopener"
+                        aria-label="Twitter Profile">
                         <div><img class="w-10" src="~/assets/logos/twitter.svg" alt=""></div>
                     </NuxtLink>
-                    <NuxtLink class="link" to="https://www.reddit.com/user/3aluw" target="_blank" rel="noopener">
+                    <NuxtLink class="link" to="https://www.reddit.com/user/3aluw" target="_blank" rel="noopener"
+                        aria-label="Reddit Profile">
                         <div><img class="w-10" src="~/assets/logos/reddit.svg" alt=""></div>
                     </NuxtLink>
 
