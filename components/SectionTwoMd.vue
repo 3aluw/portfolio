@@ -21,15 +21,15 @@
                 <p class="project-desc md:text-base lg:text-xl">{{ project.description }}</p>
                 <div class="btns-cont flex justify-left gap-3 mx-2 mt-12 ">
                     <NuxtLink v-if="project.githubLink" :to="project.githubLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
-                            class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github"
+                            class="btn-outlined" variant="outlined" prepend-icon="mdi:mdi-github" aria-label="Link"
                             >  on Github</v-btn>
                     </NuxtLink>
                     <NuxtLink v-else :to="project.demoLink" target="_blank" rel="noopener"> <v-btn density="comfortable"
-                            class="btn-outlined" variant="outlined" append-icon="mdi:mdi-play"
+                            class="btn-outlined" variant="outlined" append-icon="mdi:mdi-play" aria-label="Live demo link"
                             > Live demo</v-btn>
                     </NuxtLink>
                     <NuxtLink :to="`project/${project.slug}`"><v-btn density="comfortable"
-                            append-icon="mdi:mdi-open-in-new">
+                            append-icon="mdi:mdi-open-in-new" aria-label="More information about the project">
                             More
                             info</v-btn>
                     </NuxtLink>

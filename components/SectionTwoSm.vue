@@ -7,12 +7,15 @@
                 <p class="project-title py-2 ">{{ project.name }}</p>
                 <p class="project-desc ">{{ project.description }}</p>
                 <div class="btns-cont flex justify-start align-center gap-3 mx-2 mt-4">
-                    <NuxtLink class="github-link" :to="project.githubLink" target="_blank" rel="noopener"> <v-icon
-                            icon="mdi:mdi-github"></v-icon>
+                    <NuxtLink v-if="project.githubLink"  class="github-link" :to="project.githubLink" target="_blank" rel="noopener"> <v-icon
+                            icon="mdi:mdi-github" aria-label="github link"></v-icon>
                         Code</NuxtLink>
+                    <NuxtLink v-else-if="project.demoLink" class="github-link" :to="project.githubLink" target="_blank" rel="noopener"> <v-icon
+                            icon="mdi:mdi-play" aria-label="live demo"></v-icon>
+                       Demo</NuxtLink>
                     <NuxtLink :to="`project/${project.slug}`"> <v-icon icon="mdi:mdi-information-slab-circle"
-                            color="white">
-                        </v-icon> infos
+                            color="white" aria-label="More information about the project">
+                        </v-icon> info
                     </NuxtLink>
                 </div>
             </div>
