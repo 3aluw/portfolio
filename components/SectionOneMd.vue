@@ -21,7 +21,10 @@
 
             </div>
             <div class="pic-cont">
-                <img src="~/assets/face.png" alt="my personal picture">
+                <picture>
+                    <source srcset="~/assets/face.webp" type="image/webp" alt="my personal picture" >
+                    <img  src="~/assets/face.png" alt="my personal picture" fetchpriority="high" loading="eager" decoding="sync">
+                </picture>
             </div>
 
         </div>
